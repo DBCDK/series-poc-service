@@ -109,38 +109,38 @@ pipeline {
 				sh "webservice_validation.py http://series-poc-1-0.mi-staging.svc.cloud.dbc.dk deploy/validation.yml"
 			}
 		}
-	// stage("update staging version number for prod") {
-	// 	agent {
-	// 		docker {
-	// 			label workerNode
-	// 			image "docker.dbc.dk/build-env"
-	// 			alwaysPull true
-	// 		}
-	// 	}
-	// 	when {
-	// 		branch "master"
-	// 	}
-	// 	steps {
-	// 		dir("deploy") {
-	// 			sh "set-new-version series-poc-1-0.yml ${env.GITLAB_PRIVATE_TOKEN} ai/series-poc-secrets ${env.DOCKER_TAG} -b prod"
-	// 		}
-	// 		build job: "ai/series-poc-deploy/prod", wait: true
-	// 	}
-	// }
-	// 	stage("validate prod") {
-	// 		agent {
-	// 			docker {
-	// 				label workerNode
-	// 				image "docker.dbc.dk/build-env"
-	// 				alwaysPull true
-	// 			}
-	// 		}
-	// 		when {
-	// 			branch "master"
-	// 		}
-	// 		steps {
-	// 			sh "webservice_validation.py http://series-poc-1-0.mi-prod.svc.cloud.dbc.dk deploy/validation.yml"
-	// 		}
-	// 	}
+	stage("update version number for prod") {
+		agent {
+			docker {
+				label workerNode
+				image "docker.dbc.dk/build-env"
+				alwaysPull true
+			}
+		}
+		when {
+			branch "master"
+		}
+		steps {
+			dir("deploy") {
+				sh "set-new-version series-poc-1-0.yml ${env.GITLAB_PRIVATE_TOKEN} ai/series-poc-secrets ${env.DOCKER_TAG} -b prod"
+			}
+			build job: "ai/series-poc-deploy/prod", wait: true
+		}
+	}
+		stage("validate prod") {
+			agent {
+				docker {
+					label workerNode
+					image "docker.dbc.dk/build-env"
+					alwaysPull true
+				}
+			}
+			when {
+				branch "master"
+			}
+			steps {
+				sh "webservice_validation.py http://series-poc-1-0.mi-prod.svc.cloud.dbc.dk deploy/validation.yml"
+			}
+		}
     }
 }
