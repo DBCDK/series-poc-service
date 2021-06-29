@@ -1,0 +1,5 @@
+- validation:
+  path: /status
+  method: get
+  response:
+    status_code: 200
