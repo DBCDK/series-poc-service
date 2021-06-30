@@ -79,7 +79,7 @@ class DataProvider:
         work : Work = self.works_dict.get(pid, None) 
         return {
             "work_id": work.workid,
-            "metadata": self.pid2metadata.get(work.workid, ""),
+            "work_metadata": self.pid2metadata.get(work.workid, ""),
             "series_title": work.series.series_title,
             "universe_title": work.universe.universe_title
         }
