@@ -19,6 +19,7 @@ from dbc_pyutils import BaseHandler
 from dbc_pyutils import StatusHandler
 from dbc_pyutils import StaticHandler
 from dbc_pyutils import create_post_examples_from_dir
+from dbc_data import lowell_mapping_functions as lmf
 from dataclasses import dataclass
 from dataclasses import field
 from typing import Type
@@ -68,15 +69,17 @@ class DataProvider:
     series_dict: dict[str, Series] = {}
     universe_dict: dict[str, Universe] = {}
 
-    def __init__(self, works_dict: dict[str, Work], series_dict: dict[str, Series], universe_dict: dict[str, Universe]) -> None:
+    def __init__(self, works_dict: dict[str, Work], series_dict: dict[str, Series], universe_dict: dict[str, Universe], pid2metadata: dict) -> None:
         self.works_dict = works_dict
         self.series_dict = series_dict
         self.universe_dict = universe_dict
+        self.pid2metadata = pid2metadata
     
     def get_pid_info(self, pid: str):
         work : Work = self.works_dict.get(pid, None) 
         return {
             "work_id": work.workid,
+            "metadata": self.pid2metadata.get(work.workid, ""),
             "series_title": work.series.series_title,
             "universe_title": work.universe.universe_title
         }
@@ -162,10 +165,11 @@ def main(args):
         json_files = [json_file for json_file in os.listdir(data_dir) if json_file.endswith('.json')]
         for jf in json_files:
             works_dict, series_dict, universe_dict = read_json_file(data_dir, jf, works_dict, series_dict, universe_dict)
-    data_provider = DataProvider(works_dict, series_dict, universe_dict)
+    pid2metadata = lmf.pid2metadata (works_dict.keys())
+    data_provider = DataProvider(works_dict, series_dict, universe_dict, pid2metadata)
     app = make_app(ab_id, data_provider)
 
-    logger.info("service up at port %d", port)
+    logger.info(f"service up at port {port}")
     app.listen(port)
     ti.IOLoop.current().start()
 
@@ -222,7 +226,7 @@ def cli():
     parser.add_argument('-a', '--ab-id', dest='ab_id',
                         help="ab id of service. default is 1", default=1)
     parser.add_argument('-p', '--port', dest='port', type=int,
-                        help='port to expose service on. Default is %d' % port, default=port)
+                        help=f"port to expose service on. Default is {port}", default=port)
     parser.add_argument('-v', '--verbose', dest='verbose', action='store_true',
                         help='verbose output')
     parser.add_argument('-d', '--data-dir', dest='data_dir', help='dir containing series json data files', default=None)
