@@ -229,7 +229,7 @@ def cli():
                         help=f"port to expose service on. Default is {port}", default=port)
     parser.add_argument('-v', '--verbose', dest='verbose', action='store_true',
                         help='verbose output')
-    parser.add_argument('-d', '--data-dir', dest='data_dir', help='dir containing series json data files', default=None)
+    parser.add_argument('-d', '--data-dir', dest='data_dir', help='dir containing series json data files', default="data-files/")
     args = parser.parse_args()
 
     structured_formatter = JSONFormatter(instance_id=INSTANCE_ID, tags={'type': 'service', 'port': args.port})
