@@ -63,7 +63,7 @@ class Universe:
     included_series: set[str] = field(default_factory=set)
     included_works: set[str] = field(default_factory=set)
 
-class DataRequestHandler:
+class DataProvider:
     works_dict: dict[str, Work] = {}
     series_dict: dict[str, Series] = {}
     universe_dict: dict[str, Universe] = {}
@@ -74,70 +74,80 @@ class DataRequestHandler:
         self.universe_dict = universe_dict
     
     def get_pid_info(self, pid: str):
-        work = self.works_dict.get(pid, None)
+        work : Work = self.works_dict.get(pid, None) 
         return {
-            "work_id": work.workid
+            "work_id": work.workid,
+            "series_title": work.series.series_title,
+            "universe_title": work.universe.universe_title
         }
 
     def get_series_info(self, series_title: str):
-        series = self.series_dict.get(series_title, None)
+        series : Series = self.series_dict.get(series_title, None)
         return {
-            "series_title": series.series_title
+            "title": series.series_title,
+            "description": series.series_description,
+            "related_series": series.related_series,
+            "number_in_universe": series.number_in_universe,
+            "universe_title": series.universe.universe_title,
+            "pids": list(series.included_works)
         }
 
     def get_universe_info(self, universe_title: str):
         universe = self.universe_dict.get(universe_title, None)
         return {
-            "universe_title": universe.universe_title
+            "title": universe.universe_title,
+            "description": universe.universe_description,
+            "alternative_title": universe.universe_alternative_title,
+            "included_series": list(universe.included_series),
+            "included_works": list(universe.included_works)
         }
 
 class SeriesHandler(BaseHandler):
-    def initialize(self, data_request_handler: DataRequestHandler, stat_collector):
+    def initialize(self, data_provider: DataProvider, stat_collector):
         self.stat_collector = stat_collector
-        self.data_request_handler = data_request_handler
+        self.data_provider = data_provider
 
     def get(self):
-        series_title = self.get_argument("series_title")
+        series_title = self.get_argument("title")
         logger.info(f"series endpoint called with argument {series_title}")
-        res = self.data_request_handler.get_series_info(series_title)
+        res = self.data_provider.get_series_info(series_title)
         self.write(res)
     
 
 class UniverseHandler(BaseHandler):
-    def initialize(self, data_request_handler, stat_collector):
+    def initialize(self, data_provider, stat_collector):
         self.stat_collector = stat_collector
-        self.data_request_handler = data_request_handler
+        self.data_provider = data_provider
 
     def get(self):
-        universe_title = self.get_argument("universe_title")
+        universe_title = self.get_argument("title")
         logger.info(f"universe endpoint called with argument {universe_title}")
-        res = self.data_request_handler.get_universe_info(universe_title)
+        res = self.data_provider.get_universe_info(universe_title)
         self.write(res)
 
 class WorkHandler(BaseHandler):
-    def initialize(self, data_request_handler, stat_collector):
+    def initialize(self, data_provider, stat_collector):
         self.stat_collector = stat_collector
-        self.data_request_handler = data_request_handler
+        self.data_provider = data_provider
 
     def get(self):
         work_id = self.get_argument("workid")
         logger.info(f"pid called with argument {work_id}")
-        res = self.data_request_handler.get_pid_info(work_id)
+        res = self.data_provider.get_pid_info(work_id)
         self.write(res)
 
 
-def make_app(ab_id, data_request_handler: DataRequestHandler):
+def make_app(ab_id, data_provider: DataProvider):
     info = build_info.get_info('series_poc')
     handlers = [(r"/", MainHandler, {'stat_collector': STAT}),
                 (r"/status", StatusHandler, {'ab_id': ab_id,
                                              'info': info,
                                              'statistics': [STAT],
                                              'instance_id': INSTANCE_ID}),
-                (r"/universe", UniverseHandler, {'data_request_handler': data_request_handler, 'stat_collector': STAT}),
-                (r"/series", SeriesHandler, {'data_request_handler': data_request_handler, 'stat_collector': STAT}),
-                (r"/pid", WorkHandler, {'data_request_handler': data_request_handler, 'stat_collector': STAT})
+                (r"/universe", UniverseHandler, {'data_provider': data_provider, 'stat_collector': STAT}),
+                (r"/series", SeriesHandler, {'data_provider': data_provider, 'stat_collector': STAT}),
+                (r"/pid", WorkHandler, {'data_provider': data_provider, 'stat_collector': STAT})
             ]
-
     return tw.Application(handlers)
 
 def main(args):
@@ -152,11 +162,8 @@ def main(args):
         json_files = [json_file for json_file in os.listdir(data_dir) if json_file.endswith('.json')]
         for jf in json_files:
             works_dict, series_dict, universe_dict = read_json_file(data_dir, jf, works_dict, series_dict, universe_dict)
-        logger.info(universe_dict)
-        logger.info(series_dict)
-        logger.info(works_dict)
-    data_request_handler = DataRequestHandler(works_dict, series_dict, universe_dict)
-    app = make_app(ab_id, data_request_handler)
+    data_provider = DataProvider(works_dict, series_dict, universe_dict)
+    app = make_app(ab_id, data_provider)
 
     logger.info("service up at port %d", port)
     app.listen(port)
