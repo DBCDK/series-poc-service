@@ -11,6 +11,8 @@ RUN apt-get update && \
 	apt-get remove -y wget gcc g++ unzip && \
 	apt-get autoremove -y
 
+RUN mkdir data-files
+ADD ./data-files data-files/
 
 CMD ["series-service", "--verbose", "--port", "5000"]
 
