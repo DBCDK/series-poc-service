@@ -46,7 +46,7 @@ class Series:
     related_series: str
     number_in_universe: int
     universe: Type["Universe"]
-    included_works: set[str] = field(default_factory=set)
+    included_works: set = field(default_factory=set)
 
 @dataclass
 class Work:
@@ -61,8 +61,8 @@ class Universe:
     universe_title: str
     universe_description: str
     universe_alternative_title: str
-    included_series: set[str] = field(default_factory=set)
-    included_works: set[str] = field(default_factory=set)
+    included_series: set = field(default_factory=set)
+    included_works: set = field(default_factory=set)
 
 class DataProvider:
     works_dict: dict[str, Work] = {}
