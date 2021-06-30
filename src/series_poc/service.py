@@ -65,11 +65,11 @@ class Universe:
     included_works: set = field(default_factory=set)
 
 class DataProvider:
-    works_dict: dict[str, Work] = {}
-    series_dict: dict[str, Series] = {}
-    universe_dict: dict[str, Universe] = {}
+    works_dict: dict = {}
+    series_dict: dict = {}
+    universe_dict: dict = {}
 
-    def __init__(self, works_dict: dict[str, Work], series_dict: dict[str, Series], universe_dict: dict[str, Universe], pid2metadata: dict) -> None:
+    def __init__(self, works_dict: dict, series_dict: dict, universe_dict: dict, pid2metadata: dict) -> None:
         self.works_dict = works_dict
         self.series_dict = series_dict
         self.universe_dict = universe_dict
@@ -157,9 +157,9 @@ def main(args):
     port = args.port
     ab_id = args.ab_id
     data_dir = args.data_dir
-    works_dict: dict[str, Work] = {}
-    series_dict: dict[str, Series] = {}
-    universe_dict: dict[str, Universe] = {}
+    works_dict: dict = {}
+    series_dict: dict = {}
+    universe_dict: dict = {}
     if data_dir:
         logger.info(f"Reading data files from {data_dir}")
         json_files = [json_file for json_file in os.listdir(data_dir) if json_file.endswith('.json')]
@@ -174,9 +174,9 @@ def main(args):
     ti.IOLoop.current().start()
 
 def read_json_file(path, filename, input_works_dict, input_series_dict, input_universe_dict):
-    works_dict: dict[str, Work] = input_works_dict
-    series_dict: dict[str, Series] = input_series_dict
-    universe_dict: dict[str, Universe] = input_universe_dict
+    works_dict: dict = input_works_dict
+    series_dict: dict = input_series_dict
+    universe_dict: dict = input_universe_dict
     logger.info(f"reading json file {filename} in {path}")
     with open(os.path.join(path, filename)) as fp:
         obj_list = json.load(fp)
