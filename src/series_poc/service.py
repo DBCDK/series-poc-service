@@ -65,9 +65,6 @@ class Universe:
     included_works: set = field(default_factory=set)
 
 class DataProvider:
-    works_dict: dict = {}
-    series_dict: dict = {}
-    universe_dict: dict = {}
 
     def __init__(self, works_dict: dict, series_dict: dict, universe_dict: dict, pid2metadata: dict) -> None:
         self.works_dict = works_dict
@@ -160,6 +157,10 @@ def main(args):
     works_dict: dict = {}
     series_dict: dict = {}
     universe_dict: dict = {}
+    if not 'LOWELL_URL' in os.environ:
+        logger.error("LOWELL_URL not set")
+        import sys
+        sys.exit(-1)
     if data_dir:
         logger.info(f"Reading data files from {data_dir}")
         json_files = [json_file for json_file in os.listdir(data_dir) if json_file.endswith('.json')]
