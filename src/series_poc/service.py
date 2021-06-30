@@ -165,7 +165,10 @@ def main(args):
         json_files = [json_file for json_file in os.listdir(data_dir) if json_file.endswith('.json')]
         for jf in json_files:
             works_dict, series_dict, universe_dict = read_json_file(data_dir, jf, works_dict, series_dict, universe_dict)
-    pid2metadata = lmf.pid2metadata (works_dict.keys())
+    works_list = works_dict.keys()
+    logger.info(f"Reading works metadata for {len(works_list)} keys...")
+    pid2metadata = lmf.pid2metadata(works_list)
+    logger.info("done reading metadata")
     data_provider = DataProvider(works_dict, series_dict, universe_dict, pid2metadata)
     app = make_app(ab_id, data_provider)
 
