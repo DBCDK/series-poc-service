@@ -85,6 +85,9 @@ class DataProvider:
         if work.universe:
             res["universe_title"] = work.universe.universe_title
         return res
+    
+    def get_all_works(self):
+        return {"works": list(self.works_dict.keys())}
 
     def get_series_info(self, series_title: str):
         series : Series = self.series_dict.get(series_title, None)
@@ -103,6 +106,9 @@ class DataProvider:
             res["universe_title"] = series.universe.universe_title
         return res
 
+    def get_all_series(self):
+        return {"series": list(self.series_dict.keys())}
+
     def get_universe_info(self, universe_title: str):
         universe = self.universe_dict.get(universe_title, None)
         res = {
@@ -114,6 +120,9 @@ class DataProvider:
         if universe.universe_alternative_title:
             res["alternative_title"] = universe.universe_alternative_title
         return res
+    
+    def get_all_universes(self):
+        return {"universes": list(self.universe_dict.keys())}
 
 class SeriesHandler(BaseHandler):
     def initialize(self, data_provider: DataProvider, stat_collector):
@@ -124,6 +133,16 @@ class SeriesHandler(BaseHandler):
         series_title = self.get_argument("title")
         logger.info(f"series endpoint called with argument {series_title}")
         res = self.data_provider.get_series_info(series_title)
+        self.write(res)
+    
+class SeriesAllHandler(BaseHandler):
+    def initialize(self, data_provider: DataProvider, stat_collector):
+        self.stat_collector = stat_collector
+        self.data_provider = data_provider
+
+    def get(self):
+        logger.info(f"series-all endpoint called")
+        res = self.data_provider.get_all_series()
         self.write(res)
     
 
@@ -138,6 +157,16 @@ class UniverseHandler(BaseHandler):
         res = self.data_provider.get_universe_info(universe_title)
         self.write(res)
 
+class UniversesAllHandler(BaseHandler):
+    def initialize(self, data_provider: DataProvider, stat_collector):
+        self.stat_collector = stat_collector
+        self.data_provider = data_provider
+
+    def get(self):
+        logger.info(f"universe-all endpoint called")
+        res = self.data_provider.get_all_universes()
+        self.write(res)
+    
 class WorkHandler(BaseHandler):
     def initialize(self, data_provider, stat_collector):
         self.stat_collector = stat_collector
@@ -149,6 +178,17 @@ class WorkHandler(BaseHandler):
         res = self.data_provider.get_pid_info(work_id)
         self.write(res)
 
+class WorkAllHandler(BaseHandler):
+    def initialize(self, data_provider: DataProvider, stat_collector):
+        self.stat_collector = stat_collector
+        self.data_provider = data_provider
+
+    def get(self):
+        logger.info(f"work-all endpoint called")
+        res = self.data_provider.get_all_works()
+        self.write(res)
+    
+
 
 def make_app(ab_id, data_provider: DataProvider):
     info = build_info.get_info('series_poc')
@@ -159,7 +199,10 @@ def make_app(ab_id, data_provider: DataProvider):
                                              'instance_id': INSTANCE_ID}),
                 (r"/universe", UniverseHandler, {'data_provider': data_provider, 'stat_collector': STAT}),
                 (r"/series", SeriesHandler, {'data_provider': data_provider, 'stat_collector': STAT}),
-                (r"/pid", WorkHandler, {'data_provider': data_provider, 'stat_collector': STAT})
+                (r"/pid", WorkHandler, {'data_provider': data_provider, 'stat_collector': STAT}),
+                (r"/universe-all", UniversesAllHandler, {'data_provider': data_provider, 'stat_collector': STAT}),
+                (r"/series-all", SeriesAllHandler, {'data_provider': data_provider, 'stat_collector': STAT}),
+                (r"/pid-all", WorkAllHandler, {'data_provider': data_provider, 'stat_collector': STAT})
             ]
     return tw.Application(handlers)
 
