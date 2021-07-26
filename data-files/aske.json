@@ -1,0 +1,39 @@
+[
+    {
+        "workId": "870970-basis:47170648",
+        "seriesTitle": "Aske i munden, sand i skoen",
+        "seriesDescription": "Serie om Arvid og hans famlie",
+        "numberInSeries": 2
+    },
+    {
+        "workId": "870970-basis:46485319",
+        "seriesTitle": "Aske i munden, sand i skoen",
+        "seriesDescription": "Serie om Arvid og hans famlie",
+        "numberInSeries": 6
+    },
+    {
+        "workId": "870970-basis:51900731",
+        "seriesTitle": "Aske i munden, sand i skoen",
+        "seriesDescription": "Serie om Arvid og hans famlie",
+        "numberInSeries": 1,
+        "readFirst": true
+    },
+    {
+        "workId": "870970-basis:50550877",
+        "seriesTitle": "Aske i munden, sand i skoen",
+        "seriesDescription": "Serie om Arvid og hans famlie",
+        "numberInSeries": 3
+    },
+    {
+        "workId": "870970-basis:27696279",
+        "seriesTitle": "Aske i munden, sand i skoen",
+        "seriesDescription": "Serie om Arvid og hans famlie",
+        "numberInSeries": 4
+    },
+    {
+        "workId": "870970-basis:27475868",
+        "seriesTitle": "Aske i munden, sand i skoen",
+        "seriesDescription": "Serie om Arvid og hans famlie",
+        "numberInSeries": 5
+    }
+]

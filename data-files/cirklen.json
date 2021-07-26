@@ -1,0 +1,95 @@
+[
+    {
+        "workId": "870970-basis:25650646",
+        "seriesTitle": "Cirklen åbnes",
+        "seriesDescription": "Fantasy-serie om børn med særlige egenskaber",
+        "numberInSeries": 4,
+        "numberInUniverse": 2,
+        "universeTitle": "Cirklen universet",
+        "universeDescription": "Fantasy-univers"
+    },
+    {
+        "workId": "870970-basis:24950816",
+        "seriesTitle": "Cirklen åbnes",
+        "seriesDescription": "Fantasy-serie om børn med særlige egenskaber",
+        "numberInSeries": 3,
+        "numberInUniverse": 2,
+        "universeTitle": "Cirklen universet",
+        "universeDescription": "Fantasy-univers"
+    },
+    {
+        "workId": "870970-basis:24930017",
+        "seriesTitle": "Løvindens sang",
+        "seriesDescription": "Fantasy-serie om Alanna",
+        "numberInSeries": 1,
+        "numberInUniverse": 1,
+        "readFirst": true,
+        "universeTitle": "Tortall universet",
+        "universeDescription": "Middelalderligt fantasy-univers"
+    },
+    {
+        "workId": "870970-basis:24929957",
+        "seriesTitle": "Løvindens sang",
+        "seriesDescription": "Fantasy-serie om Alanna",
+        "numberInSeries": 4,
+        "numberInUniverse": 1,
+        "universeTitle": "Tortall universet",
+        "universeDescription": "Middelalderligt fantasy-univers"
+    },
+    {
+        "workId": "870970-basis:24929930",
+        "seriesTitle": "Løvindens sang",
+        "seriesDescription": "Fantasy-serie om Alanna",
+        "numberInSeries": 3,
+        "numberInUniverse": 1,
+        "universeTitle": "Tortall universet",
+        "universeDescription": "Middelalderligt fantasy-univers"
+    },
+    {
+        "workId": "870970-basis:24929906",
+        "seriesTitle": "Løvindens sang",
+        "seriesDescription": "Fantasy-serie om Alanna",
+        "numberInSeries": 2,
+        "numberInUniverse": 1,
+        "universeTitle": "Tortall universet",
+        "universeDescription": "Middelalderligt fantasy-univers"
+    },
+    {
+        "workId": "870970-basis:24370763",
+        "seriesTitle": "Cirklen åbnes",
+        "seriesDescription": "Fantasy-serie om børn med særlige egenskaber",
+        "numberInSeries": 2,
+        "numberInUniverse": 2,
+        "universeTitle": "Cirklen universet",
+        "universeDescription": "Fantasy-univers"
+    },
+    {
+        "workId": "870970-basis:24272885",
+        "seriesTitle": "Cirklen åbnes",
+        "seriesDescription": "Fantasy-serie om børn med særlige egenskaber",
+        "numberInSeries": 1,
+        "numberInUniverse": 2,
+        "readFirst": true,
+        "universeTitle": "Cirklen universet",
+        "universeDescription": "Fantasy-univers"
+    },
+    {
+        "workId": "870970-basis:23423626",
+        "seriesTitle": "Magiens cirkel",
+        "seriesDescription": "Fantasy-serie med moral og mening",
+        "numberInSeries": 4,
+        "numberInUniverse": 1,
+        "universeTitle": "Cirklen universet",
+        "universeDescription": "Fantasy-univers"
+    },
+    {
+        "workId": "870970-basis:22822896",
+        "seriesTitle": "Magiens cirkel",
+        "seriesDescription": "Fantasy-serie med moral og mening",
+        "numberInSeries": 1,
+        "numberInUniverse": 1,
+        "readFirst": true,
+        "universeTitle": "Cirklen universet",
+        "universeDescription": "Fantasy-univers"
+    }
+]

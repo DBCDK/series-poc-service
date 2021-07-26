@@ -23,6 +23,7 @@ from dbc_data import lowell_mapping_functions as lmf
 from dataclasses import dataclass
 from dataclasses import field
 from typing import Type
+from typing import List
 
 logger = logging.getLogger(__name__)
 
@@ -47,14 +48,15 @@ class Series:
     number_in_universe: int
     universe: Type["Universe"]
     included_works: set = field(default_factory=set)
+    series_alternative_title: list[str] = field(default_factory=list)
 
 @dataclass
 class Work:
     workid: str
     series: Type["Series"]
-    number_in_series: int
     can_be_read_independently: bool
     universe: Type["Universe"]
+    number_in_series: list[int] = field(default_factory=list)
 
 @dataclass
 class Universe:
@@ -74,33 +76,44 @@ class DataProvider:
     
     def get_pid_info(self, pid: str):
         work : Work = self.works_dict.get(pid, None) 
-        return {
+        res = {
             "work_id": work.workid,
-            "work_metadata": self.pid2metadata.get(work.workid, ""),
-            "series_title": work.series.series_title,
-            "universe_title": work.universe.universe_title
+            "work_metadata": self.pid2metadata.get(work.workid, "")
         }
+        if work.series:
+            res["series_title"] = work.series.series_title
+        if work.universe:
+            res["universe_title"] = work.universe.universe_title
+        return res
 
     def get_series_info(self, series_title: str):
         series : Series = self.series_dict.get(series_title, None)
-        return {
+        res = {
             "title": series.series_title,
             "description": series.series_description,
-            "related_series": series.related_series,
-            "number_in_universe": series.number_in_universe,
-            "universe_title": series.universe.universe_title,
             "pids": list(series.included_works)
         }
+        if len(series.series_alternative_title) > 0:
+            res["alternative_title"] = series.series_alternative_title
+        if series.related_series:
+            res["related_series"] = series.related_series
+        if series.number_in_universe:
+            res["number_in_universe"] = series.number_in_universe
+        if series.universe:
+            res["universe_title"] = series.universe.universe_title
+        return res
 
     def get_universe_info(self, universe_title: str):
         universe = self.universe_dict.get(universe_title, None)
-        return {
+        res = {
             "title": universe.universe_title,
             "description": universe.universe_description,
-            "alternative_title": universe.universe_alternative_title,
             "included_series": list(universe.included_series),
             "included_works": list(universe.included_works)
         }
+        if universe.universe_alternative_title:
+            res["alternative_title"] = universe.universe_alternative_title
+        return res
 
 class SeriesHandler(BaseHandler):
     def initialize(self, data_provider: DataProvider, stat_collector):
@@ -184,31 +197,33 @@ def read_json_file(path, filename, input_works_dict, input_series_dict, input_un
     logger.info(f"reading json file {filename} in {path}")
     with open(os.path.join(path, filename)) as fp:
         obj_list = json.load(fp)
-        logger.info("reading universes info...")
+        logger.info(f"reading universes info from {filename}...")
         for obj in obj_list:
             if "universeTitle" in obj and not obj["universeTitle"] in universe_dict:
                 universe_description = obj.get("universeDescription", None)
                 universe_alternative_title = obj.get("universeAlternativeTitle", None)
                 universe = Universe(universe_title=obj["universeTitle"], universe_description=universe_description, universe_alternative_title=universe_alternative_title)
                 universe_dict[obj["universeTitle"]] = universe
-        logger.info("reading series info...")
+        logger.info(f"reading series info from {filename}...")
         for obj in obj_list:
             if "seriesTitle" in obj and not obj["seriesTitle"] in series_dict:
                 series_descr = obj.get("seriesDescription", None)
                 number_in_universe_str = obj.get("numberInUniverse", None)
                 number_in_universe = int(number_in_universe_str) if number_in_universe_str  else None
+                alternative_title_str = obj.get("seriesAlternativeTitle", None)
+                series_alternative_title = alternative_title_str if alternative_title_str else None
                 related_series = obj.get("relatedSeries", None)
                 universe = universe_dict[obj["universeTitle"]] if "universeTitle" in obj else None
-                series = Series(series_title=obj["seriesTitle"], series_description=series_descr, related_series=related_series, number_in_universe=number_in_universe, universe=universe)
+                series = Series(series_title=obj["seriesTitle"], series_description=series_descr, related_series=related_series, number_in_universe=number_in_universe, universe=universe, series_alternative_title=series_alternative_title)
                 series_dict[obj["seriesTitle"]] = series
                 if universe:
                     universe.included_series.add(series.series_title)
-        logger.info("reading works info...")
+        logger.info(f"reading works info from {filename}...")
         for obj in obj_list:
             if "workId" in obj and not obj["workId"] in works_dict:
                 series = series_dict.get(obj["seriesTitle"], None) if "seriesTitle" in obj else None
                 number_in_series_str = obj.get("numberInSeries", None)
-                number_in_series = int(number_in_series_str) if number_in_series_str else None
+                number_in_series = number_in_series_str if number_in_series_str else None
                 can_be_read_independently = obj.get("canBeReadIndependently", False)
                 universe = universe_dict.get(obj["universeTitle"], None) if "universeTitle" in obj else None
                 work = Work(workid=obj["workId"], series=series, number_in_series=number_in_series, can_be_read_independently=can_be_read_independently, universe=universe)
