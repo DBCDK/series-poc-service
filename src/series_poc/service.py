@@ -24,6 +24,7 @@ from dataclasses import dataclass
 from dataclasses import field
 from typing import Type
 from typing import List
+import json5
 
 logger = logging.getLogger(__name__)
 
@@ -241,7 +242,7 @@ def read_json_file(path, filename, input_works_dict, input_series_dict, input_un
     universe_dict: dict = input_universe_dict
     logger.info(f"reading json file {filename} in {path}")
     with open(os.path.join(path, filename)) as fp:
-        obj_list = json.load(fp)
+        obj_list = json5.load(fp)
         logger.info(f"reading universes info from {filename}...")
         for obj in obj_list:
             if "universeTitle" in obj and not obj["universeTitle"] in universe_dict:
