@@ -85,7 +85,7 @@ class DataProvider:
             res["series_title"] = work.series.series_title
         if work.universe:
             res["universe_title"] = work.universe.universe_title
-        if work.number_in_series and len(work.number_in_series) > 0:
+        if work.number_in_series:
             res["number_in_series"] = work.number_in_series
         return res
     
