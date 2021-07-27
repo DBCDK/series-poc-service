@@ -52,6 +52,35 @@ function work( record ) {
         outputJson[ "numberInUniverse" ] = f530c;
     }
 
+//read first
+    var f530e = marcRecord.getValue( "530", "e" );
+    if ( "" !== f530e ) {
+        outputJson[ "readFirst" ] = true;
+    }
+
+//can be read independently
+    var f530g = marcRecord.getValue( "530", "g" );
+    if ( "" !== f530g ) {
+        outputJson[ "canBeReadIndependently" ] = true;
+    }
+
+//universe title
+    var f534i = marcRecord.getValue( "534", "i" );
+    if ( "" !== f534i ) {
+        outputJson[ "universeTitle" ] = f534i;
+    }
+
+//universe description
+    var f534b = marcRecord.getValue( "534", "b" );
+    if ( "" !== f534b ) {
+        outputJson[ "universeDescription" ] = f534b;
+    }
+
+//universe alternative title
+    var f534x = marcRecord.getValue( "534", "x" );
+    if ( "" !== f534x ) {
+        outputJson[ "universeAlternativeTitle" ] = f534x;
+    }
 
     printn( JSON.stringify( outputJson ) + "," );
 
