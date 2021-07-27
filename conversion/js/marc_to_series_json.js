@@ -18,7 +18,7 @@ function work( record ) {
 
     var outputJson = {};
 
-    outputJson[ "workId" ] = "870970-basis" + marcRecord.getValue( "001", "a" );
+    outputJson[ "workId" ] = "870970-basis:" + marcRecord.getValue( "001", "a" );
 
 //series title
     var f530i = marcRecord.getValue( "530", "i" );
