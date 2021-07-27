@@ -13,7 +13,7 @@ then
 fi
 
 INPUT=$1
-OUTPUT=$(basename -s .lin $INPUT)-latin.iso
+OUTPUT=$(basename -s .lin $INPUT)-latin1.iso
 
 echo "File will be converted to ISO2709 in charset LATIN-1 and saved as $OUTPUT"
 iconv -f UTF-8 -t LATIN1 $INPUT > tmp-latin1.lin
