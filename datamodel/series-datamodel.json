@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "vi.skal.have.fundet.en.url.dbc.dk",
+  "title": "Series in bibliographic records",
+  "description": "Model for series and universe information based on danMARC2 records",
+  "type": "object",
+  "required": [
+    "workId",
+    "seriesTitle"
+  ],
+  "properties": {
+    "workId": {
+      "description": "The id of the work that is described with relation to series and universe",
+      "origin": "marc field 001*a, or work-presenation-id or pid from corepo",
+      "type": "string"
+    },
+    "seriesTitle": {
+      "description": "Title of the series this work belongs to",
+      "origin": "marc field 530*i",
+      "type": "string"
+    },
+    "seriesDescription": {
+      "description": "Description of the series this work belongs to",
+      "origin": "marc field 530*b",
+      "type": "string"
+    },
+    "seriesAlternativeTitle": {
+      "description": "Alternative title for the series - maybe an array instead",
+      "origin": "marc field 530*x",
+      "type": "string"
+    },
+    "numberInSeries": {
+      "description": "The number in the series",
+      "origin": "marc field 530*d",
+      "type": "number"
+    },
+    "numberInUniverse": {
+      "description": "Number of the series in the universe",
+      "origin": "marc field 530*c",
+      "type": "number"
+    },
+    "readFirst": {
+      "description": "Read this work first when starting with this series",
+      "origin": "marc field 530*e",
+      "type": "boolean"
+    },
+    "canBeReadIndependently": {
+      "description": "This work has no specific place in the series and can be read at any time",
+      "origin": "marc field 530*g",
+      "type": "boolean"
+    },
+    "universeTitle": {
+      "description": "Title of the universe this work belongs to",
+      "origin": "marc field 534*i",
+      "type": "string"
+    },
+    "universeDescription": {
+      "description": "Description of the universe this work belongs to",
+      "origin": "marc field 534*b",
+      "type": "string"
+    },
+    "universeAlternativeTitle": {
+      "description": "Alternative title for the universe - maybe an array instead",
+      "origin": "marc field 534*x",
+      "type": "string"
+    }
+  }
+}
