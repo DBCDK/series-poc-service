@@ -7,6 +7,7 @@ ENV PORT=5000
 RUN apt-get update && \
 	apt-get install -y --no-install-recommends wget gcc g++ unzip && \
 	pip install -U pip && \
+	pip install json5 && \
 	pip install series-poc && \
 	apt-get remove -y wget gcc g++ unzip && \
 	apt-get autoremove -y
