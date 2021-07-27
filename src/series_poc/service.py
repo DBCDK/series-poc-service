@@ -48,7 +48,7 @@ class Series:
     number_in_universe: int
     universe: Type["Universe"]
     included_works: set = field(default_factory=set)
-    series_alternative_title: list[str] = field(default_factory=list)
+    series_alternative_title: list = field(default_factory=list)
 
 @dataclass
 class Work:
@@ -56,7 +56,7 @@ class Work:
     series: Type["Series"]
     can_be_read_independently: bool
     universe: Type["Universe"]
-    number_in_series: list[int] = field(default_factory=list)
+    number_in_series: list = field(default_factory=list)
 
 @dataclass
 class Universe:
