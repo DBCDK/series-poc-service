@@ -1,66 +1,8 @@
 [
-    {
-        "workId": "870970-basis:48960596",
-        "seriesTitle": "De 5",
-        "seriesDescription": "Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy",
-        "seriesAlternativeTitle": "De fem",
-        "numberInSeries": 19
-    },
-    {
-        "workId": "870970-basis:47917786",
-        "seriesTitle": "De 5",
-        "seriesDescription": "Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy",
-        "seriesAlternativeTitle": "De fem",
-        "numberInSeries": 2
-    },
-    {
-        "workId": "870970-basis:51663535",
-        "seriesTitle": "De 5",
-        "seriesDescription": "Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy",
-        "seriesAlternativeTitle": "De fem",
-        "numberInSeries": [
-            16,
-            17,
-            18
-        ]
-    },
-    {
-        "workId": "870970-basis:51663535",
-        "seriesTitle": "De 5 (samling)",
-        "seriesDescription": "Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy",
-        "seriesAlternativeTitle": "De fem",
-        "numberInSeries": 6
-    },
-    {
-        "workId": "870970-basis:51077024",
-        "seriesTitle": "De 5",
-        "seriesDescription": "Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy",
-        "seriesAlternativeTitle": "De fem",
-        "numberInSeries": [
-            10,
-            11,
-            12
-        ]
-    },
-    {
-        "workId": "870970-basis:51077024",
-        "seriesTitle": "De 5 (samling)",
-        "seriesDescription": "Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy",
-        "seriesAlternativeTitle": "De fem",
-        "numberInSeries": 4
-    },
-    {
-        "workId": "870970-basis:26070066",
-        "seriesTitle": "De 5",
-        "seriesDescription": "Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy",
-        "seriesAlternativeTitle": "De fem",
-        "numberInSeries": 5
-    },
-    {
-        "workId": "870970-basis:25891007",
-        "seriesTitle": "De 5",
-        "seriesDescription": "Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy",
-        "seriesAlternativeTitle": "De fem",
-        "numberInSeries": 4
-    }
+{"workId":"870970-basis:48960596","seriesTitle":"De 5","seriesDescription":"Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy.","seriesAlternativeTitle":["De fem"],"numberInSeries":["19"]},
+{"workId":"870970-basis:47917786","seriesTitle":"De 5","seriesDescription":"Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy.","seriesAlternativeTitle":["De fem"],"numberInSeries":["2"]},
+{"workId":"870970-basis:51663535","seriesTitle":"De 5 (samling)De 5","seriesDescription":"Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy.Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy.","seriesAlternativeTitle":["De fem"],"numberInSeries":["6"]},
+{"workId":"870970-basis:51077024","seriesTitle":"De 5 (samling)De 5","seriesDescription":"Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy.Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy.","seriesAlternativeTitle":["De fem"],"numberInSeries":["4"]},
+{"workId":"870970-basis:26070066","seriesTitle":"De 5","seriesDescription":"Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy.","seriesAlternativeTitle":["De fem"],"numberInSeries":["5"]},
+{"workId":"870970-basis:25891007","seriesTitle":"De 5","seriesDescription":"Om de fem venner Anne, Dick, Julian og Georgina, samt Georgs hund Timothy.","seriesAlternativeTitle":["De fem"],"numberInSeries":["4"]},
 ]
