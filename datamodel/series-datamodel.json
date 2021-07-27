@@ -25,14 +25,20 @@
       "type": "string"
     },
     "seriesAlternativeTitle": {
-      "description": "Alternative title for the series - maybe an array instead",
+      "description": "Alternative titles for the series",
       "origin": "marc field 530*x",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "numberInSeries": {
-      "description": "The number in the series",
+      "description": "The number(s) in the series",
       "origin": "marc field 530*d",
-      "type": "number"
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
     },
     "numberInUniverse": {
       "description": "Number of the series in the universe",
