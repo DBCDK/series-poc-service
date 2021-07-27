@@ -1,0 +1,370 @@
+001 00 *a25650646*b870970*c20210705110554*d20050222*fa
+004 00 *rn*ae
+008 00 *tm*uf*a2005*bdk*dx*jf*ldan*ob*v0
+009 00 *aa*gxx
+021 00 *a87-588-0731-4*chf.*dkr. 348,00
+032 00 *xACC200508*aDBF200513*xSFD200513*xDAT991243
+041 00 *adan*ceng
+100 00 *5870979*668824818
+241 00 *aShatterglass
+245 00 *aGlasdragen*eTamora Pierce*fpå dansk ved Bjarne Skovlund
+260 00 *&1*aRuds-Vedby*bTellerup*c2005*kNørhaven, Viborg
+300 00 *a292 sider
+440 00 *0*aZephyr
+440 00 *0*aCirklen åbnes*v4
+504 00 *&1*aFantasy. Den 14-årige pige Trisana er troldmandskyndig, og sammen med sin elev, den unge mand Antonou, bliver hun inddraget i en uhyggelig sag med en grusom seriemorder. Ved hjælp af deres troldomskunster forsøger de at indkredse den bestialske morder
+521 00 *&REX*b[1. oplag]*c2005
+530 00 *iCirklen åbnes*bFantasy-serie om børn med særlige egenskaber*c2*d4
+534 00 *iCirklen universet*bFantasy-univers
+652 00 *n83.8*z296
+652 00 *osk
+666 00 *0*ofantasy
+666 00 *0*ofantasy
+666 00 *0*ufor 12 år
+666 00 *0*ufor 13 år
+666 00 *0*ufor 14 år
+990 00 *aSFD*o200513*bL*bS*bB*cA
+996 00 *aDBC
+d08 00 *aBØK/SKO kode fjernet ved masserettelse og 990b tilføjet
+d08 00 *odnj*rdra*aserieprojekt
+d08 00 *amasserettet i forb. med konvertering af aldersnoter
+d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
+d09 00 *zMVA200513*zMVB200513*zMVC200513*zMSA200513
+d09 00 *zREX200520
+d30 00 *n1
+d31 00 *b135*h209*t19
+d32 00 *b134*h209*t19
+d35 00 *aI*i01*n01*p01*q01
+f01 00 *hL
+s12 00 *tBOGMUS200510
+z99 00 *adra
+
+001 00 *a24950816*b870970*c20210701095848*d20031117*fa
+004 00 *rn*ae
+008 00 *tm*uf*a2002*bdk*dx*jf*ldan*ob*v0
+009 00 *aa*gxx
+021 00 *a87-588-0732-2*chf.*dkr. 348,00
+032 00 *aDBF200351*xSFD200351*xACC200347*xDAT991243
+041 00 *adan*ceng
+100 00 *5870979*668824818
+241 00 *aCold fire
+245 00 *aMordbrænderen*eTamora Pierce*fpå dansk ved Bjarne Skovlund
+260 00 *&1*aRuds-Vedby*bTellerup*c[2002]*kNørhaven, Viborg
+300 00 *a282 sider
+440 00 *0*aZephyr
+440 00 *0*aCirklen åbnes*v3
+504 00 *&1*aFantasy. Den trolddomskyndige Daja er med sin læremester Frospin i byen Kesra, der plages af pyromanbrande. Dajas er knyttet til ild, og hun hvivles ind i opklaringen af de mystiske brande
+530 00 *iCirklen åbnes*bFantasy-serie om børn med særlige egenskaber*c2*d3
+534 00 *iCirklen universet*bFantasy-univers
+652 00 *n83.8*z296
+652 00 *osk
+666 00 *0*ofantasy
+666 00 *0*ufor 12 år
+666 00 *0*ufor 13 år
+666 00 *0*ufor 14 år
+990 00 *aSFD*o200351*bL*bS*bB*cA
+996 00 *aDBC
+d08 00 *aBØK/SKO kode fjernet ved masserettelse og 990b tilføjet
+d08 00 *abfj*rdra*aserieprojekt
+d08 00 *amasserettet i forb. med konvertering af aldersnoter
+d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
+d09 00 *zMVA200351*zMVB200351*zMVC200351
+d30 00 *n1
+d31 00 *b135*h210*t22
+d32 00 *b135*h210*t21
+d35 00 *aI*bf*i01*n01*p01*q01
+s12 00 *tBOGMUS200348
+z99 00 *adra
+
+001 00 *a24930017*b870970*c20210705110552*d20031103*fa
+004 00 *rn*ae
+008 00 *tm*uu*a2005*bdk*dx*jf*ldan*ob*v0
+009 00 *aa*gxx
+017 00 *a07311400
+021 00 *a87-588-0735-7*chf.*dkr. 248,00
+032 00 *aDBF200539*xSFD200539*xACC200345*xDAT991243
+041 00 *adan*ceng
+100 00 *5870979*668824818
+241 00 *aAlanna*ramerikansk*u1983
+245 00 *aAlanna*eTamora Pierce*fpå dansk ved Hanne Steinicke
+250 00 *a2. udgave
+260 00 *&1*aRuds-Vedby*bTellerup*c[2005]*kNørhaven, Viborg
+300 00 *a159 sider
+440 00 *0*aLøvindens sang*v1
+504 00 *&1*aDe 10-årige tvillinger Alanna og Thom er børn af en lensherre i Landet Torfall. De har magiske evner og hvirvles ind i dramatiske begivenheder, da de trodser deres traditions-bestemte opdragelse
+520 00 *aTidligere: 1. udgave. 1991. (Zephyr)
+521 00 *&REX*b[1. oplag]*c[2005]
+530 00 *iLøvindens sang*bFantasy-serie om Alanna*c1*d1*eLæses først
+534 00 *iTortall universet*bMiddelalderligt fantasy-univers
+652 00 *n83.8*z296
+652 00 *osk
+666 00 *0*ofantasy
+666 00 *0*ufor 12 år
+666 00 *0*ufor 13 år
+666 00 *0*ufor 14 år
+990 00 *aSFD*o200539*bS*bB*cA
+996 00 *aDBC
+d08 00 *aBØK/SKO kode fjernet ved masserettelse og 990b tilføjet
+d08 00 *ajyh/sk, amh (032: 2.udg. modtaget fra KB 200344, men først udkommet aug. 2005)*rdra*aserieprojekt
+d08 00 *amasserettet i forb. med konvertering af aldersnoter
+d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
+d08 00 *amasserettelse, 520-årstal flyttet til 241u, april 2021
+d09 00 *zREX200539
+d30 00 *n1
+d31 00 *b125*h200*t10
+d32 00 *b125*h200*t10
+d35 00 *aP*bf*i03*n03*p01*q03
+f06 00 *bS*bB
+s12 00 *tTeamBo200535
+z99 00 *adra
+
+001 00 *a24929957*b870970*c20210701102112*d20031103*fa
+004 00 *rn*ae
+008 00 *tm*uu*a2003*bdk*dx*jf*ldan*ob*v0
+009 00 *aa*gxx
+017 00 *a20054840
+021 00 *a87-588-0738-1*chf.*dkr. 248,00
+032 00 *aDBF200411*xSFD200411*xACC200345*xDAT991243
+041 00 *adan*ceng
+100 00 *5870979*668824818
+241 00 *aLioness rampant*u1988
+245 00 *aDen ¤springende løvinde*eTamora Pierce*fpå dansk ved Hanne Steinicke
+250 00 *a2. udgave
+260 00 *&1*aRuds-Vedby*bTellerup*c2003*kNørhaven, Viborg
+300 00 *a230 sider
+440 00 *0*aLøvindens sang*v4
+504 00 *&1*aPå sin søgen efter ærefulde eventyr møder Alanna Liam Jernarm, Shang-Dragen, som lærer hende en ny kampform. Men landet Tortall er i nød og kalder hende hjem til det endelige opgør
+520 00 *aTidligere: 1. udgave. 1992. (Zephyr)
+530 00 *iLøvindens sang*bFantasy-serie om Alanna*c1*d4
+534 00 *iTortall universet*bMiddelalderligt fantasy-univers
+652 00 *n83.8*z296
+652 00 *osk
+666 00 *0*sriddere
+666 00 *0*smagi
+666 00 *0*ofantasy
+666 00 *0*ufor 12 år
+666 00 *0*ufor 13 år
+666 00 *0*ufor 14 år
+990 00 *aSFD*o200411*bS*bB*cA
+996 00 *aDBC
+d08 00 *aBØK/SKO kode fjernet ved masserettelse og 990b tilføjet
+d08 00 *apsc/bvl, amh*rdra*aserieprojekt
+d08 00 *amasserettet i forb. med konvertering af aldersnoter
+d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
+d08 00 *amasserettelse, 520-årstal flyttet til 241u, april 2021
+d30 00 *n1
+d31 00 *b125*h200*t15
+d32 00 *b125*h200*t15
+d35 00 *aP*bf*i03*n09*p01*q09
+s12 00 *tBOGART200408
+z99 00 *adra
+
+001 00 *a24929930*b870970*c20210701102109*d20031103*fa
+004 00 *rn*ae
+008 00 *tm*uu*a2003*bdk*dx*jf*ldan*ob*v0
+009 00 *aa*gxx
+017 00 *a20003766
+021 00 *a87-588-0737-3*chf.*dkr. 248,00
+032 00 *aDBF200411*xSFD200411*xACC200345*xDAT991243
+041 00 *adan*ceng
+100 00 *5870979*668824818
+241 00 *aThe ¤woman who rides like a man
+245 00 *aKvinden der rider som en mand*eTamora Pierce*fpå dansk ved Hanne Steinicke
+250 00 *a2. udgave
+260 00 *&1*aRuds-Vedby*bTellerup*c2003*kNørhaven Paperback, Viborg
+300 00 *a165 sider
+440 00 *0*aLøvindens sang*v3
+504 00 *&1*aAlanna adopteres af bazhirerne, et ørkenfolk i det sydlige Tortall, og bliver deres shaman. Samtidig er hun splittet i sin kærlighed til kronprinsen Jonathan og tyvenes konge Gergi
+520 00 *&1*aOriginaludgave: 1986
+520 00 *aTidligere: 1. udgave. 1992. (Zephyr)
+530 00 *iLøvindens sang*bFantasy-serie om Alanna*c1*d3
+534 00 *iTortall universet*bMiddelalderligt fantasy-univers
+652 00 *n83.8*z296
+652 00 *osk
+666 00 *0*sriddere
+666 00 *0*smagi
+666 00 *0*ofantasy
+666 00 *0*ufor 12 år
+666 00 *0*ufor 13 år
+666 00 *0*ufor 14 år
+990 00 *aSFD*o200411*bS*bB*cA
+996 00 *aDBC
+d08 00 *aBØK/SKO kode fjernet ved masserettelse og 990b tilføjet
+d08 00 *apsc/kgk, amh*rdra*aserieprojekt
+d08 00 *amasserettet i forb. med konvertering af aldersnoter
+d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
+d30 00 *n1
+d31 00 *b125*h200*t11
+d32 00 *b125*h200*t11
+d35 00 *aP*bf*i03*n08*p01*q08
+s12 00 *tBOGART200408
+z99 00 *adra
+
+001 00 *a24929906*b870970*c20210701102107*d20031103*fa
+004 00 *rn*ae
+008 00 *tm*uu*a2003*bdk*dx*jf*ldan*ob*v0
+009 00 *aa*gxx
+017 00 *a07344015
+021 00 *a87-588-0736-5*chf.*dkr. 248,00
+032 00 *aDBF200411*xSFD200411*xACC200345*xDAT991243
+041 00 *adan*ceng
+100 00 *5870979*668824818
+241 00 *aIn the hand of the goddess
+245 00 *aI gudindens hånd*eTamora Pierce*fpå dansk ved Hanne Steinicke
+250 00 *a2. udgave
+260 00 *&1*aRuds-Vedby*bTellerup*c2003*kNørhaven, Viborg
+300 00 *a157 sider
+440 00 *0*aLøvindens sang*v2
+504 00 *&1*aAlanna får hårdt brug for sine ridderfærdigheder og magiske evner, da hun, som væbner for prins Jonathan, hvirvles ind i drabelige kampe pga. troldmanden Rogirs intriger
+520 00 *aTidligere: 1. udgave. 1992. (Zephyr)
+530 00 *iLøvindens sang*bFantasy-serie om Alanna*c1*d2
+534 00 *iTortall universet*bMiddelalderligt fantasy-univers
+652 00 *n83.8*z296
+652 00 *osk
+666 00 *0*ofantasy
+666 00 *0*ufor 12 år
+666 00 *0*ufor 13 år
+666 00 *0*ufor 14 år
+990 00 *aSFD*o200411*bS*bB*cA
+996 00 *aDBC
+d08 00 *aBØK/SKO kode fjernet ved masserettelse og 990b tilføjet
+d08 00 *ajyh/sk, amh*rdra*aserieprojekt
+d08 00 *amasserettet i forb. med konvertering af aldersnoter
+d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
+d30 00 *n1
+d31 00 *b125*h200*t10
+d32 00 *b125*h200*t10
+d35 00 *aP*bf*i03*n10*p01*q10
+s12 00 *tBOGART200408
+z99 00 *adra
+
+001 00 *a24370763*b870970*c20210701095842*d20021121*fa
+004 00 *rn*ae
+008 00 *tm*uf*a2002*bdk*dx*jf*ldan*ob*v0
+009 00 *aa*gxx
+021 00 *a87-588-0724-1*chf.*dkr. 348,00
+032 00 *aDBF200304*xSFD200304*xACC200247*xDAT991243
+041 00 *adan*ceng
+100 00 *5870979*668824818
+241 00 *aStreet magic
+245 00 *aStenmagi*eTamora Pierce*fpå dansk ved Bjarne Skovlund
+260 00 *&1*aRuds-Vedby*bTellerup*c[2002]*kNørhaven, Viborg
+300 00 *a236 sider
+440 00 *0*aZephyr
+440 00 *0*aCirklen åbnes*v2
+504 00 *&1*aFantasy. Den unge troldmand, Thorn Ege, opdager magiske kræfter hos den forældreløse pige Evi, og han bliver hendes læremester. Men Evis evner efterstræbes også af andre mørke kræfter
+530 00 *iCirklen åbnes*bFantasy-serie om børn med særlige egenskaber*c2*d2
+534 00 *iCirklen universet*bFantasy-univers
+652 00 *n83.8*z296
+652 00 *osk
+666 00 *0*ofantasy
+666 00 *0*ufor 12 år
+666 00 *0*ufor 13 år
+666 00 *0*ufor 14 år
+990 00 *aSFD*o200304*bL*bS*bB*cA
+996 00 *aDBC
+d08 00 *aBØK/SKO kode fjernet ved masserettelse og 990b tilføjet
+d08 00 *aosh*rdra*aserieprojekt
+d08 00 *amasserettet i forb. med konvertering af aldersnoter
+d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
+d09 00 *zMVB200304
+s12 00 *tBOGART200301
+z99 00 *adra
+
+001 00 *a24272885*b870970*c20210701095845*d20020920*fa
+004 00 *rn*ae
+008 00 *tm*uf*a2002*bdk*dx*jf*ldan*ob*v0
+009 00 *aa*gxx
+021 00 *a87-588-0722-5*chf.*dkr. 348,00
+032 00 *aDBF200243*xSFD200243*xACC200238*xDAT991243
+041 00 *adan*ceng
+100 00 *5870979*668824818
+241 00 *aMagic steps
+245 00 *aMagiske trin*eTamora Pierce*fpå dansk ved Bjarne Skovlund
+260 00 *&1*aRuds-Vedby*bTellerup*c2002*kNørhaven, Viborg
+300 00 *a205 sider
+440 00 *0*aZephyr
+440 00 *0*aCirklen åbnes*v1
+504 00 *&1*aFantasy. Den unge trolddomskyndige Sandrilene opdager magiske kræfter i drengen Pascos dans. Hun bliver hans læremester i udøvelsen af trolddom, og sammen tilintetgør de nogle ondsindede mordere
+530 00 *iCirklen åbnes*bFantasy-serie om børn med særlige egenskaber*c2*d1*eLæses først
+534 00 *iCirklen universet*bFantasy-univers
+652 00 *n83.8*z296
+652 00 *osk
+666 00 *0*ofantasy
+666 00 *0*ufor 12 år
+666 00 *0*ufor 13 år
+666 00 *0*ufor 14 år
+990 00 *aSFD*o200243*bL*bS*bB*cA
+996 00 *aDBC
+d08 00 *aBØK/SKO kode fjernet ved masserettelse og 990b tilføjet
+d08 00 *acs*rdra*aserieprojekt
+d08 00 *amasserettet i forb. med konvertering af aldersnoter
+d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
+d09 00 *zMVB200243
+z99 00 *adra
+
+001 00 *a23423626*b870970*c20210705110547*d20010322*fa
+004 00 *rn*ae
+008 00 *tm*uf*a2001*bdk*dx*jf*ldan*ob*v0
+009 00 *aa*gxx
+021 00 *a87-588-0712-8*chf.*dkr. 348,00
+032 00 *aDBF200116*xSFD200116*xACC200112*xDAT991243
+041 00 *adan*ceng
+100 00 *5870979*668824818
+241 00 *aBriar's book
+245 00 *aPlantetroldmanden*eTamora Pierce*fpå dansk ved Bjarne Skovlund*fkortet ... tegnet af Ian Schoenherr
+260 00 *&1*aRuds-Vedby*bTellerup*c2001*kNørhaven, Viborg
+300 00 *a220 sider*bill.
+440 00 *0*aZephyr
+440 00 *0*aMagiens cirkel*v4
+504 00 *&1*aFantasy. Den unge troldmandselev Torn besøger sin veninde Felicia i byens fattigkvarter. Han opdager, at hun lider af en mystisk og livstruende sygdom. Han får hende anbragt i karantæne og plejer hende, men Felicia overlever ikke. Karantænen har ikke hjulpet, for sygdommen breder sig nu til hele byen
+530 00 *iMagiens cirkel*bFantasy-serie med moral og mening*c1*d4
+534 00 *iCirklen universet*bFantasy-univers
+652 00 *n83.8*z296
+652 00 *osk
+666 00 *0*ofantasy
+666 00 *0*ufor 12 år
+666 00 *0*ufor 13 år
+666 00 *0*ufor 14 år
+990 00 *aSFD*o200116*bL*bS*bB*cA
+996 00 *aDBC
+d08 00 *aBØK/SKO kode fjernet ved masserettelse og 990b tilføjet*rdra*aserieprojekt
+d08 00 *adra
+d08 00 *amasserettet i forb. med konvertering af aldersnoter
+d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
+z99 00 *adra
+
+001 00 *a22822896*b870970*c20210705110836*d20000306*fa
+004 00 *rn*ae
+008 00 *&f*tm*ur*a2000*z2001*bdk*dx*jf*ldan*ob*v0
+009 00 *aa*gxx
+021 00 *a87-588-0688-1*chf.*dkr. 348,00
+032 00 *aDBF200203*xSFD200203*xDAT200048*xACC200149
+041 00 *adan*ceng
+100 00 *5870979*668824818
+241 00 *aSandry's book
+245 00 *aSpiralcirklens tempel*eTamora Pierce*fpå dansk ved Bjarne Skovlund
+250 00 *x2. oplag
+260 00 *&1*aRuds-Vedby*bTellerup*c[2001]*kNørhaven, Viborg
+300 00 *a222 sider
+440 00 *0*aZephyr
+440 00 *0*aMagiens cirkel*v1
+504 00 *&1*aFantasy. Troldmanden Niklaron finder frem til fire unge mennesker, der alle helt specielle magiske evner. Disse unge føres til spiralcirklens tempel, hvor de skal lære at udnytte deres evner rigtigt
+520 00 *aTidligere: 1. udgave. 2000
+521 00 *a[1. oplag]*c[2000]
+521 00 *b2. oplag*c[2001]
+530 00 *iMagiens cirkel*bFantasy-serie med moral og mening*c1*d1*eLæses først
+534 00 *iCirklen universet*bFantasy-univers
+652 00 *n83.8*z296
+652 00 *osk
+666 00 *0*ofantasy
+990 00 *aSFD*o200203*bS*bB*bl*cA
+996 00 *aDBC
+d08 00 *aLU-afmærkning tilføjet i 990b/hes20200226
+d08 00 *aBØK/SKO kode fjernet ved masserettelse og 990b tilføjet*rdra*aserieprojekt
+d08 00 *anø-he
+d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
+d90 00 *aSFD*bL*bS*bB*cA*o200013
+z99 00 *adra
+
+
