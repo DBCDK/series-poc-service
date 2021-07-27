@@ -1,7 +1,7 @@
 use( "Log" );
 use( "Print" );
-use ( "XmlUtil" );
-use ( "MarcXchange" );
+use( "XmlUtil" );
+use( "MarcXchange" );
 
 
 //required function for jspipetool, will be executed before all records are processed
@@ -11,19 +11,49 @@ function begin() {
 }
 
 //default work function for jspipetool
-function work( record  ) {
+function work( record ) {
 
-var xml = XmlUtil.fromString( record );
-var marcRecord = MarcXchange.marcXchangeToMarcRecord( xml );
+    var xml = XmlUtil.fromString( record );
+    var marcRecord = MarcXchange.marcXchangeToMarcRecord( xml );
 
-var outputJson = {};
+    var outputJson = {};
 
-var workId = "870970-basis" + marcRecord.getValue( "001", "a" );
+    outputJson[ "workId" ] = "870970-basis" + marcRecord.getValue( "001", "a" );
 
-outputJson[ "workId" ] = workId;
+//series title
+    var f530i = marcRecord.getValue( "530", "i" );
+    if ( "" !== f530i ) {
+        outputJson[ "seriesTitle" ] = f530i;
+    }
+//series description
+    var f530b = marcRecord.getValue( "530", "b" );
+    if ( "" !== f530b ) {
+        outputJson[ "seriesDescription" ] = f530b;
+    }
+//series alternative title
+    var alternativeTitles = [];
+    marcRecord.field( "530" ).eachSubField( "x", function( field, subfield ) {
+        alternativeTitles.push( subfield.value );
+    } );
+    if ( 0 !== alternativeTitles.length ) {
+        outputJson[ "seriesAlternativeTitle" ] = alternativeTitles;
+    }
+// number in series
+    var numberInSeries = [];
+    marcRecord.field( "530" ).eachSubField( "d", function( field, subfield ) {
+        numberInSeries.push( subfield.value );
+    } );
+    if ( 0 !== numberInSeries.length ) {
+        outputJson[ "numberInSeries" ] = numberInSeries;
+    }
+//number in universe
+    var f530c = marcRecord.getValue( "530", "c" );
+    if ( "" !== f530c ) {
+        outputJson[ "numberInUniverse" ] = f530c;
+    }
 
 
-printn( JSON.stringify( outputJson ) + "," );
+    printn( JSON.stringify( outputJson ) + "," );
 
 }
 
