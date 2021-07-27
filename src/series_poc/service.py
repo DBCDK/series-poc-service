@@ -84,6 +84,8 @@ class DataProvider:
             res["series_title"] = work.series.series_title
         if work.universe:
             res["universe_title"] = work.universe.universe_title
+        if work.number_in_series and len(work.number_in_series) > 0:
+            res["number_in_series"] = work.number_in_series
         return res
     
     def get_all_works(self):
