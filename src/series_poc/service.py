@@ -272,14 +272,12 @@ def read_json_file(path, filename, input_works_dict, input_series_dict, input_un
                 if not obj["workId"] in works_dict: # this is a work we have not seen before
                     universe = universe_dict.get(obj["universeTitle"], None) if "universeTitle" in obj else None
                     can_be_read_independently = obj.get("canBeReadIndependently", False)
-                    work = Work(workid=obj["workId"], series_memberships={series.series_title: number_in_series} if series else {}, can_be_read_independently=can_be_read_independently, universe=universe.universe_title if universe else None)
+                    work = Work(workid=obj["workId"], series_memberships={series.series_title: number_in_series} if series else { }, can_be_read_independently=can_be_read_independently, universe=universe)
                     works_dict[obj["workId"]] = work
                 else:
                     work = works_dict.get(obj["workId"])
-                    if work:
-                        series_memberships = work.series_memberships
-                        if series_memberships and series:
-                            series_memberships[series.series_title] = number_in_series
+                    if work and series:
+                        work.series_memberships[series.series_title] = number_in_series
                 if series:
                     series.included_works.add(work.workid)
                 if universe:
