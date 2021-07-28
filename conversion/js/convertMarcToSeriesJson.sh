@@ -13,4 +13,4 @@ while getopts ":h" opt; do
   esac
 done
 
-exec jspipetool --threads 5 --log-level trace --log-file series-conversion.log isoxml marc_to_series_json.js 
+exec jspipetool --threads 1 --log-level trace --log-file series-conversion.log isoxml marc_to_series_json.js 
