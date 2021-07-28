@@ -23,6 +23,7 @@ from dbc_data import lowell_mapping_functions as lmf
 from dataclasses import dataclass
 from dataclasses import field
 from typing import Type
+from typing import Dict
 from typing import List
 import json5
 
@@ -42,30 +43,28 @@ class MainHandler(BaseHandler):
             self.write("Series POC!")
 
 @dataclass
+class Work:
+    workid: str
+    can_be_read_independently: bool
+    universe: Type["Universe"]
+    series_memberships: dict = field(default_factory=dict) # dict from str (Series) -> list[int]
+
+@dataclass
 class Series:
     series_title: str
     series_description: str
-    related_series: str
     number_in_universe: int
     universe: Type["Universe"]
-    included_works: set = field(default_factory=set)
-    series_alternative_title: list = field(default_factory=list)
-
-@dataclass
-class Work:
-    workid: str
-    series: Type["Series"]
-    can_be_read_independently: bool
-    universe: Type["Universe"]
-    number_in_series: list = field(default_factory=list)
+    included_works: set = field(default_factory=set) # set of WorkIds
+    series_alternative_title: list = field(default_factory=list) # list of strings
 
 @dataclass
 class Universe:
     universe_title: str
     universe_description: str
-    universe_alternative_title: str
-    included_series: set = field(default_factory=set)
-    included_works: set = field(default_factory=set)
+    universe_alternative_title: list = field(default_factory=list) # list of strings
+    included_series: set = field(default_factory=set) # set of Series titles objects
+    included_works: set = field(default_factory=set) # set of WorkIds
 
 class DataProvider:
 
@@ -77,16 +76,16 @@ class DataProvider:
     
     def get_pid_info(self, pid: str):
         work : Work = self.works_dict.get(pid, None) 
+        if not work:
+            return {}
         res = {
             "work_id": work.workid,
             "work_metadata": self.pid2metadata.get(work.workid, "")
         }
-        if work.series:
-            res["series_title"] = work.series.series_title
+        if work.series_memberships:
+            res["series_memberships"] = [{self.series_dict[key].series_title: work.series_memberships[key]} for key in work.series_memberships]
         if work.universe:
             res["universe_title"] = work.universe.universe_title
-        if work.number_in_series:
-            res["number_in_series"] = work.number_in_series
         return res
     
     def get_all_works(self):
@@ -101,8 +100,6 @@ class DataProvider:
         }
         if len(series.series_alternative_title) > 0:
             res["alternative_title"] = series.series_alternative_title
-        if series.related_series:
-            res["related_series"] = series.related_series
         if series.number_in_universe:
             res["number_in_universe"] = series.number_in_universe
         if series.universe:
@@ -224,7 +221,11 @@ def main(args):
         logger.info(f"Reading data files from {data_dir}")
         json_files = [json_file for json_file in os.listdir(data_dir) if json_file.endswith('.json')]
         for jf in json_files:
+            logger.info(f"reading json file {jf}")
             works_dict, series_dict, universe_dict = read_json_file(data_dir, jf, works_dict, series_dict, universe_dict)
+        logger.debug(f"works_dict: {works_dict}")
+        logger.debug(f"series_dict: {series_dict}")
+        logger.debug(f"universe_dict: {universe_dict}")
     works_list = works_dict.keys()
     logger.info(f"Reading works metadata for {len(works_list)} keys...")
     pid2metadata = lmf.pid2metadata(works_list)
@@ -240,17 +241,15 @@ def read_json_file(path, filename, input_works_dict, input_series_dict, input_un
     works_dict: dict = input_works_dict
     series_dict: dict = input_series_dict
     universe_dict: dict = input_universe_dict
-    logger.info(f"reading json file {filename} in {path}")
     with open(os.path.join(path, filename)) as fp:
         obj_list = json5.load(fp)
-        logger.info(f"reading universes info from {filename}...")
         for obj in obj_list:
             if "universeTitle" in obj and not obj["universeTitle"] in universe_dict:
                 universe_description = obj.get("universeDescription", None)
-                universe_alternative_title = obj.get("universeAlternativeTitle", None)
+                universe_alternative_title_str = obj.get("universeAlternativeTitle", None)
+                universe_alternative_title = universe_alternative_title_str if universe_alternative_title_str else None
                 universe = Universe(universe_title=obj["universeTitle"], universe_description=universe_description, universe_alternative_title=universe_alternative_title)
                 universe_dict[obj["universeTitle"]] = universe
-        logger.info(f"reading series info from {filename}...")
         for obj in obj_list:
             if "seriesTitle" in obj and not obj["seriesTitle"] in series_dict:
                 series_descr = obj.get("seriesDescription", None)
@@ -258,28 +257,34 @@ def read_json_file(path, filename, input_works_dict, input_series_dict, input_un
                 number_in_universe = int(number_in_universe_str) if number_in_universe_str  else None
                 alternative_title_str = obj.get("seriesAlternativeTitle", None)
                 series_alternative_title = alternative_title_str if alternative_title_str else None
-                related_series = obj.get("relatedSeries", None)
                 universe = universe_dict[obj["universeTitle"]] if "universeTitle" in obj else None
-                series = Series(series_title=obj["seriesTitle"], series_description=series_descr, related_series=related_series, number_in_universe=number_in_universe, universe=universe, series_alternative_title=series_alternative_title)
+                series = Series(series_title=obj["seriesTitle"], series_description=series_descr, number_in_universe=number_in_universe, universe=universe, series_alternative_title=series_alternative_title)
                 series_dict[obj["seriesTitle"]] = series
+                universe = universe_dict.get(obj['universeTitle'], None) if 'universeTitle' in obj else None
                 if universe:
                     universe.included_series.add(series.series_title)
-        logger.info(f"reading works info from {filename}...")
         for obj in obj_list:
-            if "workId" in obj and not obj["workId"] in works_dict:
+            if "workId" in obj:
                 series = series_dict.get(obj["seriesTitle"], None) if "seriesTitle" in obj else None
+                universe = universe_dict.get(obj['universeTitle'], None) if 'universeTitle' in obj else None
                 number_in_series_str = obj.get("numberInSeries", None)
-                number_in_series = number_in_series_str if number_in_series_str else None
-                can_be_read_independently = obj.get("canBeReadIndependently", False)
-                universe = universe_dict.get(obj["universeTitle"], None) if "universeTitle" in obj else None
-                work = Work(workid=obj["workId"], series=series, number_in_series=number_in_series, can_be_read_independently=can_be_read_independently, universe=universe)
-                works_dict[obj["workId"]] = work
+                number_in_series = [int(s) for s in number_in_series_str] if number_in_series_str else None
+                if not obj["workId"] in works_dict: # this is a work we have not seen before
+                    universe = universe_dict.get(obj["universeTitle"], None) if "universeTitle" in obj else None
+                    can_be_read_independently = obj.get("canBeReadIndependently", False)
+                    work = Work(workid=obj["workId"], series_memberships={series.series_title: number_in_series} if series else {}, can_be_read_independently=can_be_read_independently, universe=universe.universe_title if universe else None)
+                    works_dict[obj["workId"]] = work
+                else:
+                    work = works_dict.get(obj["workId"])
+                    if work:
+                        series_memberships = work.series_memberships
+                        if series_memberships and series:
+                            series_memberships[series.series_title] = number_in_series
                 if series:
                     series.included_works.add(work.workid)
                 if universe:
                     universe.included_works.add(work.workid)
     return works_dict, series_dict, universe_dict
-
 
 def cli():
     """ Commandline interface """
