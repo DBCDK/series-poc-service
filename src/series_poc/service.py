@@ -4,7 +4,6 @@
 """
 :mod:`series_poc.service` -- series service
 """
-import json
 import logging
 import os
 import tornado.web as tw
@@ -17,14 +16,10 @@ from dbc_pyutils import Statistics
 from dbc_pyutils import Stat
 from dbc_pyutils import BaseHandler
 from dbc_pyutils import StatusHandler
-from dbc_pyutils import StaticHandler
-from dbc_pyutils import create_post_examples_from_dir
 from dbc_data import lowell_mapping_functions as lmf
 from dataclasses import dataclass
 from dataclasses import field
 from typing import Type
-from typing import Dict
-from typing import List
 import json5
 
 logger = logging.getLogger(__name__)

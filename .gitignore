@@ -27,3 +27,6 @@ docs/_build/
 #Javascript log
 conversion/js/series-conversion.log
 
+# some jupyter internal folder
+
+notebooks/.ipynb*
