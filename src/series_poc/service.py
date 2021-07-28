@@ -8,7 +8,6 @@ import logging
 import os
 import tornado.web as tw
 import tornado.ioloop as ti
-
 from dbc_pyutils import JSONFormatter
 from dbc_pyutils import build_info
 from dbc_pyutils import create_instance_id
@@ -42,7 +41,7 @@ class Work:
     workid: str
     can_be_read_independently: bool
     universe: Type["Universe"]
-    series_memberships: dict = field(default_factory=dict) # dict from str (Series) -> list[int]
+    series_memberships: dict = field(default_factory=dict) # dict from str (series titles) -> list[int]
 
 @dataclass
 class Series:
@@ -58,8 +57,8 @@ class Universe:
     universe_title: str
     universe_description: str
     universe_alternative_title: list = field(default_factory=list) # list of strings
-    included_series: set = field(default_factory=set) # set of Series titles objects
-    included_works: set = field(default_factory=set) # set of WorkIds
+    included_series: set = field(default_factory=set) # set of series titles (strings) 
+    included_works: set = field(default_factory=set) # set of workIds (strings)
 
 class DataProvider:
 
@@ -95,10 +94,10 @@ class DataProvider:
         }
         if len(series.series_alternative_title) > 0:
             res["alternative_title"] = series.series_alternative_title
-        if series.number_in_universe:
-            res["number_in_universe"] = series.number_in_universe
         if series.universe:
             res["universe_title"] = series.universe.universe_title
+        if series.number_in_universe:
+            res["number_in_universe"] = series.number_in_universe
         return res
 
     def get_all_series(self):
@@ -150,7 +149,10 @@ class UniverseHandler(BaseHandler):
         universe_title = self.get_argument("title")
         logger.info(f"universe endpoint called with argument {universe_title}")
         res = self.data_provider.get_universe_info(universe_title)
-        self.write(res)
+        if res:
+            self.write(res)
+        else:
+            self.set_status(404)
 
 class UniversesAllHandler(BaseHandler):
     def initialize(self, data_provider: DataProvider, stat_collector):
@@ -160,7 +162,10 @@ class UniversesAllHandler(BaseHandler):
     def get(self):
         logger.info(f"universe-all endpoint called")
         res = self.data_provider.get_all_universes()
-        self.write(res)
+        if res: 
+            self.write(res)
+        else:
+            self.set_status(404)
     
 class WorkHandler(BaseHandler):
     def initialize(self, data_provider, stat_collector):
@@ -171,7 +176,10 @@ class WorkHandler(BaseHandler):
         work_id = self.get_argument("workid")
         logger.info(f"pid called with argument {work_id}")
         res = self.data_provider.get_pid_info(work_id)
-        self.write(res)
+        if res:
+            self.write(res)
+        else:
+            self.set_status(404)
 
 class WorkAllHandler(BaseHandler):
     def initialize(self, data_provider: DataProvider, stat_collector):
@@ -183,8 +191,6 @@ class WorkAllHandler(BaseHandler):
         res = self.data_provider.get_all_works()
         self.write(res)
     
-
-
 def make_app(ab_id, data_provider: DataProvider):
     info = build_info.get_info('series_poc')
     handlers = [(r"/", MainHandler, {'stat_collector': STAT}),
@@ -243,7 +249,7 @@ def read_json_file(path, filename, input_works_dict, input_series_dict, input_un
                 universe_description = obj.get("universeDescription", None)
                 universe_alternative_title_str = obj.get("universeAlternativeTitle", None)
                 universe_alternative_title = universe_alternative_title_str if universe_alternative_title_str else None
-                universe = Universe(universe_title=obj["universeTitle"], universe_description=universe_description, universe_alternative_title=universe_alternative_title)
+                universe = Universe(obj["universeTitle"], universe_description, universe_alternative_title)
                 universe_dict[obj["universeTitle"]] = universe
         for obj in obj_list:
             if "seriesTitle" in obj and not obj["seriesTitle"] in series_dict:
