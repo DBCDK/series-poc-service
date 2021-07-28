@@ -16,73 +16,80 @@ function work( record ) {
     var xml = XmlUtil.fromString( record );
     var marcRecord = MarcXchange.marcXchangeToMarcRecord( xml );
 
-    var outputJson = {};
+    var output = "";
+    marcRecord.eachField( "530", function( field ) {
 
-    outputJson[ "workId" ] = "870970-basis:" + marcRecord.getValue( "001", "a" );
+        var outputJson = {};
+
+        outputJson[ "workId" ] = "870970-basis:" + marcRecord.getValue( "001", "a" );
 
 //series title
-    var f530i = marcRecord.getValue( "530", "i" );
-    if ( "" !== f530i ) {
-        outputJson[ "seriesTitle" ] = f530i;
-    }
+        var f530i = field.getValue( "i" );
+        if ( "" !== f530i ) {
+            outputJson[ "seriesTitle" ] = f530i;
+        }
 //series description
-    var f530b = marcRecord.getValue( "530", "b" );
-    if ( "" !== f530b ) {
-        outputJson[ "seriesDescription" ] = f530b;
-    }
+        var f530b = field.getValue( "b" );
+        if ( "" !== f530b ) {
+            outputJson[ "seriesDescription" ] = f530b;
+        }
 //series alternative title
-    var alternativeTitles = [];
-    marcRecord.field( "530" ).eachSubField( "x", function( field, subfield ) {
-        alternativeTitles.push( subfield.value );
-    } );
-    if ( 0 !== alternativeTitles.length ) {
-        outputJson[ "seriesAlternativeTitle" ] = alternativeTitles;
-    }
+        var alternativeTitles = [];
+        field.eachSubField( "x", function( field, subfield ) {
+            alternativeTitles.push( subfield.value );
+        } );
+        if ( 0 !== alternativeTitles.length ) {
+            outputJson[ "seriesAlternativeTitle" ] = alternativeTitles;
+        }
 // number in series
-    var numberInSeries = [];
-    marcRecord.field( "530" ).eachSubField( "d", function( field, subfield ) {
-        numberInSeries.push( subfield.value );
-    } );
-    if ( 0 !== numberInSeries.length ) {
-        outputJson[ "numberInSeries" ] = numberInSeries;
-    }
+        var numberInSeries = [];
+        field.eachSubField( "d", function( field, subfield ) {
+            numberInSeries.push( subfield.value );
+        } );
+        if ( 0 !== numberInSeries.length ) {
+            outputJson[ "numberInSeries" ] = numberInSeries;
+        }
 //number in universe
-    var f530c = marcRecord.getValue( "530", "c" );
-    if ( "" !== f530c ) {
-        outputJson[ "numberInUniverse" ] = f530c;
-    }
+        var f530c = field.getValue( "c" );
+        if ( "" !== f530c ) {
+            outputJson[ "numberInUniverse" ] = f530c;
+        }
 
 //read first
-    var f530e = marcRecord.getValue( "530", "e" );
-    if ( "" !== f530e ) {
-        outputJson[ "readFirst" ] = true;
-    }
+        var f530e = field.getValue( "e" );
+        if ( "" !== f530e ) {
+            outputJson[ "readFirst" ] = true;
+        }
 
 //can be read independently
-    var f530g = marcRecord.getValue( "530", "g" );
-    if ( "" !== f530g ) {
-        outputJson[ "canBeReadIndependently" ] = true;
-    }
+        var f530g = field.getValue( "g" );
+        if ( "" !== f530g ) {
+            outputJson[ "canBeReadIndependently" ] = true;
+        }
 
 //universe title
-    var f534i = marcRecord.getValue( "534", "i" );
-    if ( "" !== f534i ) {
-        outputJson[ "universeTitle" ] = f534i;
-    }
+        var f534i = marcRecord.getValue( "534", "i" );
+        if ( "" !== f534i ) {
+            outputJson[ "universeTitle" ] = f534i;
+        }
 
 //universe description
-    var f534b = marcRecord.getValue( "534", "b" );
-    if ( "" !== f534b ) {
-        outputJson[ "universeDescription" ] = f534b;
-    }
+        var f534b = marcRecord.getValue( "534", "b" );
+        if ( "" !== f534b ) {
+            outputJson[ "universeDescription" ] = f534b;
+        }
 
 //universe alternative title
-    var f534x = marcRecord.getValue( "534", "x" );
-    if ( "" !== f534x ) {
-        outputJson[ "universeAlternativeTitle" ] = f534x;
-    }
+        var f534x = marcRecord.getValue( "534", "x" );
+        if ( "" !== f534x ) {
+            outputJson[ "universeAlternativeTitle" ] = f534x;
+        }
+        output += JSON.stringify( outputJson ) + ",";
 
-    printn( JSON.stringify( outputJson ) + "," );
+    } )
+
+
+    printn( output );
 
 }
 
@@ -91,4 +98,5 @@ function end() {
     printn( "]" );
 
 }
+
 
