@@ -50,7 +50,7 @@ class Series:
     number_in_universe: int
     universe: Type["Universe"]
     included_works: set = field(default_factory=set) # set of WorkIds
-    series_alternative_title: list[str] = field(default_factory=list) # list of strings
+    series_alternative_title: list = field(default_factory=list) # list of strings
 
 @dataclass
 class Universe:
