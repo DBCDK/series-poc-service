@@ -50,7 +50,7 @@ class Series:
     number_in_universe: int
     universe: Type["Universe"]
     included_works: set = field(default_factory=set) # set of WorkIds
-    series_alternative_title: list = field(default_factory=list) # list of strings
+    series_alternative_title: list[str] = field(default_factory=list) # list of strings
 
 @dataclass
 class Universe:
@@ -87,10 +87,12 @@ class DataProvider:
 
     def get_series_info(self, series_title: str):
         series : Series = self.series_dict.get(series_title, None)
+        if not series:
+            return {}
         res = {
             "title": series.series_title,
             "description": series.series_description,
-            "pids": list(series.included_works)
+            "pids": sorted(list(series.included_works), key=lambda workid: series_num(workid=workid, works_dict=self.works_dict, series_title=series.series_title))
         }
         if len(series.series_alternative_title) > 0:
             res["alternative_title"] = series.series_alternative_title
@@ -127,7 +129,10 @@ class SeriesHandler(BaseHandler):
         series_title = self.get_argument("title")
         logger.info(f"series endpoint called with argument {series_title}")
         res = self.data_provider.get_series_info(series_title)
-        self.write(res)
+        if res:
+            self.write(res)
+        else:
+            self.set_status(404)
     
 class SeriesAllHandler(BaseHandler):
     def initialize(self, data_provider: DataProvider, stat_collector):
@@ -224,6 +229,8 @@ def main(args):
         for jf in json_files:
             logger.info(f"reading json file {jf}")
             works_dict, series_dict, universe_dict = read_json_file(data_dir, jf, works_dict, series_dict, universe_dict)
+#        for st,s in series_dict.items():
+#           s.included_works = set(sorted(list(s.included_works), key=lambda workid: series_num(workid=workid, works_dict=works_dict, series_title=st), reverse=True))
         logger.debug(f"works_dict: {works_dict}")
         logger.debug(f"series_dict: {series_dict}")
         logger.debug(f"universe_dict: {universe_dict}")
@@ -284,6 +291,15 @@ def read_json_file(path, filename, input_works_dict, input_series_dict, input_un
                 if universe:
                     universe.included_works.add(work.workid)
     return works_dict, series_dict, universe_dict
+
+def series_num(workid, works_dict, series_title):
+    work = works_dict.get(workid, None)
+    if not work:
+        return 100000
+    sm = work.series_memberships.get(series_title, None)
+    if not sm:
+        return 100000
+    return min(sm, default=100000)
 
 def cli():
     """ Commandline interface """
