@@ -1,0 +1,177 @@
+001 00 *a39231794*b870970*c20210720123314*d20210602*fa
+004 00 *rn*ae
+008 00 *tm*uu*a2021*bdk*dx*jf*ldan*ob*v0
+009 00 *aa*gxx
+017 00 *a24309444
+021 00 *e9788702323320*cib.
+032 00 *xACC202122*aDBF202131*xBKM202131
+100 00 *5870979*668864038*4aut
+245 00 *aBusters verden
+250 00 *a3. [i.e. ny] udgave
+260 00 *&1*a[Kbh.]*bGyldendal*c2021
+300 00 *a130 sider
+504 00 *&1*aBuster, en glad og godmodig fyr, er søn af en arbejdsløs tryllekunstner. Han er skrap til at trylle og klarer mangen en vanskelig og penibel situation ved at vise sine helt utrolige færdigheder
+520 00 *&1*aOriginaludgave: 1979
+520 00 *aTidligere: 3. udgave (Bogklubudgave). 2002. - Bogklubudgave i.e. 2. udgave. 1993. - 1. udgave. 1979*n05437970*r87-411-2260-7
+521 00 *b1. oplag*c2021
+526 00 *&1*iSamhørende*tBusters verden*tKys stjernerne*tHvor regnbuen ender
+652 00 *n86*z096
+652 00 *osk
+666 00 *0*hBuster (Bjarne Reuter)
+666 00 *0*sanderledes
+666 00 *0*smobning
+666 00 *0*strylleri
+666 00 *0*sskolen
+666 00 *0*shandicappede
+666 00 *0*sfar-søn-forholdet
+666 00 *0*sfamilien
+666 00 *0*qBrønshøj
+666 00 *0*qDanmark
+666 00 *0*i1950-1959
+666 00 *0*oromaner
+666 00 *0*osjove bøger
+666 00 *0*ufor 11 år
+666 00 *0*ufor 12 år
+666 00 *0*ufor 13 år
+990 00 *bb*bs*unu
+996 00 *aDBC
+d08 00 *fjdy*ohsa
+s12 00 *tTeamBAM202128
+z99 00 *ahsa
+
+001 00 *a50844919*b870970*c20201212104036*d20140205*fa
+004 00 *rn*ae
+008 00 *tm*uf*a2013*bdk*dx*jf*ldan*nb*ob*w1*v0
+009 00 *aa*gxe
+021 00 *e9788702158267
+032 00 *aDBF201408*xACC201406*xBKM201408*xERE201803*xDAT201606*xDAT991505*xDAT991608
+100 00 *5870979*668864038*4aut
+245 00 *aHvor regnbuen ender
+250 00 *a1. e-bogsudgave*b$-
+260 00 *bGyldendal*g[sælges på internettet]*c2013
+504 00 *&1*aBuster Oregon Mortensens foretagsomhed ved Caroline Amalies fødselsdagsselskab får rystende følger for det forestående krybbespil. Men Buster klarer ærterne, selv om han går i dummeklasse
+512 00 *aDownloades i EPUB-format
+526 00 *&1*i3. del af*tBusters Verden*b. Seriens indhold se denne
+652 00 *n86*z096
+652 00 *osk
+666 00 *0*osjove bøger
+666 00 *0*sanderledes
+666 00 *0*sfamilien
+666 00 *0*sfar-søn-forholdet
+666 00 *0*smobning
+666 00 *0*shandicappede
+666 00 *0*strylleri
+666 00 *0*sskolen
+666 00 *0*qDanmark
+666 00 *0*qBrønshøj
+666 00 *0*i1950-1959
+666 00 *0*ufor 11 år
+666 00 *0*ufor 12 år
+666 00 *0*ufor 13 år
+856 00 *zAdgang til lån hos eReolen.dk*uhttps://ereolen.dk/ting/object/870970-basis:50844919
+990 00 *o201408*bb*bs*unt
+996 00 *aDBC
+d08 00 *aEBI-kode og -url fjernet ved masserettelse*aFjernet fra eReolen 10/04/2015*aFjernet fra eReolenLicens 03/02/2016*aGenoplivet på eReolen 01/01/2018
+d08 00 *oljl*kdra
+d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
+d70 00 *bDiv
+f06 00 *bb*bs
+f21 00 *ahttp://samples.pubhub.dk/9788702158267.epub*lPublizon*fhttp://images.pubhub.dk/originals/368ea171-b234-4290-9e65-913938690196.jpg*ahttp://dmat.dbc.dk/eVALU/get.php?isbn=9788702158267*n9788702158267
+f21 00 *leReolen*n9788702158267
+n01 00 *v20131205
+n51 00 *a20140212
+s12 00 *tTeamBLY201406
+z98 00 *aMinus korrekturprint
+z99 00 *amasseret*d1
+
+001 00 *a50844811*b870970*c20201212104037*d20140205*fa
+004 00 *rn*ae
+008 00 *tm*uf*a2013*bdk*dx*jf*ldan*nb*ob*w1*v0
+009 00 *aa*gxe
+021 00 *e9788702158229
+032 00 *aDBF201408*xACC201406*xBKM201408*xERE201803*xDAT201525*xDAT991505*xDAT991608
+100 00 *5870979*668864038*4aut
+245 00 *aBusters verden
+250 00 *a1. e-bogsudgave*b$-
+260 00 *bGyldendal*g[sælges på internettet]*c2013
+504 00 *&1*aBuster, en glad og godmodig fyr, er søn af en arbejdsløs tryllekunstner. Han er skrap til at trylle og klarer mangen en vanskelig og penibel situation ved at vise sine helt utrolige færdigheder
+512 00 *aDownloades i EPUB-format
+526 00 *&1*iSamhørende*tBusters verden*tKys stjernerne*tHvor regnbuen ender
+652 00 *n86*z096
+652 00 *osk
+666 00 *0*osjove bøger
+666 00 *0*sanderledes
+666 00 *0*sfamilien
+666 00 *0*sfar-søn-forholdet
+666 00 *0*smobning
+666 00 *0*shandicappede
+666 00 *0*strylleri
+666 00 *0*sskolen
+666 00 *0*qDanmark
+666 00 *0*qBrønshøj
+666 00 *0*i1950-1959
+666 00 *0*ufor 11 år
+666 00 *0*ufor 12 år
+666 00 *0*ufor 13 år
+856 00 *zAdgang til lån hos eReolen.dk*uhttps://ereolen.dk/ting/object/870970-basis:50844811
+990 00 *o201408*bb*bs*unt
+996 00 *aDBC
+d08 00 *aEBI-kode og -url fjernet ved masserettelse*aFjernet fra eReolen 10/04/2015*aFjernet fra eReolenLicens 23/05/2015*aGenoplivet på eReolenLicens 24/05/2015*aFjernet fra eReolenLicens 19/01/2016*aGenoplivet på eReolen 01/01/2018
+d08 00 *oljl*kdra
+d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
+d70 00 *bDiv
+f06 00 *bb*bs
+f21 00 *ahttp://samples.pubhub.dk/9788702158229.epub*lPublizon*fhttp://images.pubhub.dk/originals/54ed3caa-75d4-4cf0-a1cc-d4e754279824.jpg*ahttp://dmat.dbc.dk/eVALU/get.php?isbn=9788702158229*n9788702158229
+f21 00 *leReolen*n9788702158229
+n01 00 *v20131203
+n51 00 *a20140212
+s12 00 *tTeamBLY201406
+z98 00 *aMinus korrekturprint
+z99 00 *amasseret*d1
+
+001 00 *a50845052*b870970*c20201212104037*d20140128*fa
+004 00 *rn*ae
+008 00 *tm*uf*a2013*bdk*dx*jf*ldan*nb*ob*w1*v0
+009 00 *aa*gxe
+021 00 *e9788702158274
+032 00 *aDBF201407*xACC201405*xBKM201407*xERE201803*xDAT201606*xDAT991505*xDAT991608
+100 00 *5870979*668864038*4aut
+245 00 *aKys stjernerne
+250 00 *a1. e-bogsudgave*b$-
+260 00 *bGyldendal*g[sælges på internettet]*c2013
+504 00 *&1*aHumoristisk fortælling om Buster O. Mortensens fantastiske oplevelser, den mystiske hest Krølulds-Kalle, sheik Sulimans krumsabel o. m. a
+512 00 *aDownloades i EPUB-format
+520 00 *&1*aOriginaludgave: 1979
+526 00 *&1*i2. del af*tBusters Verden*b. Seriens indhold se denne
+652 00 *n86*z096
+652 00 *osk
+666 00 *0*osjove bøger
+666 00 *0*sanderledes
+666 00 *0*sfamilien
+666 00 *0*sfar-søn-forholdet
+666 00 *0*smobning
+666 00 *0*shandicappede
+666 00 *0*strylleri
+666 00 *0*sskolen
+666 00 *0*qDanmark
+666 00 *0*qBrønshøj
+666 00 *0*i1950-1959
+666 00 *0*ufor 11 år
+666 00 *0*ufor 12 år
+666 00 *0*ufor 13 år
+856 00 *zAdgang til lån hos eReolen.dk*uhttps://ereolen.dk/ting/object/870970-basis:50845052
+990 00 *o201407*bb*bs*unt
+996 00 *aDBC
+d08 00 *aEBI-kode og -url fjernet ved masserettelse*aFjernet fra eReolen 10/04/2015*aFjernet fra eReolenLicens 03/02/2016*aGenoplivet på eReolen 01/01/2018
+d08 00 *objo*knk
+d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
+d70 00 *bDiv
+f06 00 *bb*bs
+f21 00 *ahttp://samples.pubhub.dk/9788702158274.epub*lPublizon*fhttp://images.pubhub.dk/originals/8cad5ef6-7abf-49a0-82be-7f2ff73a4328.jpg*ahttp://dmat.dbc.dk/eVALU/get.php?isbn=9788702158274*n9788702158274
+f21 00 *leReolen*n9788702158274
+n01 00 *v20131204
+n51 00 *a20140205
+s12 00 *tTeamBMV201405
+z98 00 *aMinus korrekturprint
+z99 00 *amasseret*d1
+
