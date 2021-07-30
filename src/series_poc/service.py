@@ -229,11 +229,6 @@ def main(args):
         for jf in json_files:
             logger.info(f"reading json file {jf}")
             works_dict, series_dict, universe_dict = read_json_file(data_dir, jf, works_dict, series_dict, universe_dict)
-#        for st,s in series_dict.items():
-#           s.included_works = set(sorted(list(s.included_works), key=lambda workid: series_num(workid=workid, works_dict=works_dict, series_title=st), reverse=True))
-        logger.debug(f"works_dict: {works_dict}")
-        logger.debug(f"series_dict: {series_dict}")
-        logger.debug(f"universe_dict: {universe_dict}")
     works_list = works_dict.keys()
     logger.info(f"Reading works metadata for {len(works_list)} keys...")
     pid2metadata = lmf.pid2metadata(works_list)
