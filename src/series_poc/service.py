@@ -6,6 +6,7 @@
 """
 import logging
 import os
+import typing
 import tornado.web as tw
 import tornado.ioloop as ti
 from dbc_pyutils import JSONFormatter
@@ -41,7 +42,7 @@ class Work:
     workid: str
     can_be_read_independently: bool
     universe: Type["Universe"]
-    series_memberships: dict = field(default_factory=dict) # dict from str (series titles) -> list[int]
+    series_memberships: typing.Dict[str, typing.List[int]] = field(default_factory=dict) # dict from str (series titles) -> list[int]
 
 @dataclass
 class Series:
@@ -49,16 +50,16 @@ class Series:
     series_description: str
     number_in_universe: int
     universe: Type["Universe"]
-    included_works: set = field(default_factory=set) # set of WorkIds
-    series_alternative_title: list = field(default_factory=list) # list of strings
+    included_works: typing.Set[str] = field(default_factory=set) # set of WorkIds
+    series_alternative_title: typing.List[str] = field(default_factory=list) # list of strings
 
 @dataclass
 class Universe:
     universe_title: str
     universe_description: str
-    universe_alternative_title: list = field(default_factory=list) # list of strings
-    included_series: set = field(default_factory=set) # set of series titles (strings) 
-    included_works: set = field(default_factory=set) # set of workIds (strings)
+    universe_alternative_title: typing.List[str] = field(default_factory=list) # list of strings
+    included_series: typing.Set[str] = field(default_factory=set) # set of series titles (strings) 
+    included_works: typing.Set[str] = field(default_factory=set) # set of workIds (strings)
 
 class DataProvider:
 
@@ -94,7 +95,7 @@ class DataProvider:
             "description": series.series_description,
             "pids": sorted(list(series.included_works), key=lambda workid: series_num(workid=workid, works_dict=self.works_dict, series_title=series.series_title))
         }
-        if len(series.series_alternative_title) > 0:
+        if series.series_alternative_title and len(series.series_alternative_title) > 0:
             res["alternative_title"] = series.series_alternative_title
         if series.universe:
             res["universe_title"] = series.universe.universe_title
