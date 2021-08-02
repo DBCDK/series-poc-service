@@ -16,7 +16,7 @@
 520 00 *aTidligere: 1. udgave. 2018*n53983618*r9788772041438
 521 00 *b1. oplag*c2020
 526 00 *&1*iKrimiserien med*tRenée Ballard ; 1
-530 00 *iRenée Ballard-serien*tRenée Ballard series*bKrimiserie om den unge kriminalassistent Renée Ballard hos LAPD*d1*eLæses først
+530 00 *iRenée Ballard-serien*xRenée Ballard series*bKrimiserie om den unge kriminalassistent Renée Ballard hos LAPD*d1*eLæses først
 534 00 *iMichael Connellys krimi-univers*bFiktivt krimi-univers der tager afsæt i Los Angeles Police Department (LAPD). Serierne har mange krydsende figurer
 652 00 *n83*z26
 652 00 *osk
@@ -53,8 +53,8 @@ z99 00 *aljl
 520 00 *aTidligere: 1. udgave. 2019*n46384652*r9788772043074
 521 00 *b1. oplag*c2020
 526 00 *&1*iKrimiserien med*tHarry Bosch og Renée Ballard ; 1
-530 00 *iRenée Ballard-serien*tRenée Ballard series*bKrimiserie om den unge kriminalassistent Renée Ballard hos LAPD*d2
-530 00 *iHarry Bosch-serien*tHarry Bosch series*bKrimiserie om kriminalassistent og veteran hos LAPD, Harry Bosch*c1*d21
+530 00 *iRenée Ballard-serien*xRenée Ballard series*bKrimiserie om den unge kriminalassistent Renée Ballard hos LAPD*d2
+530 00 *iHarry Bosch-serien*xHarry Bosch series*bKrimiserie om kriminalassistent og veteran hos LAPD, Harry Bosch*c1*d21
 534 00 *iMichael Connellys krimi-univers*bFiktivt krimi-univers der tager afsæt i Los Angeles Police Department (LAPD). Serierne har mange krydsende figurer
 652 00 *n83*z26
 652 00 *osk
@@ -84,8 +84,8 @@ z99 00 *aljl
 440 00 *aHarry Bosch*v[22]
 504 00 *aJ.J. Thompson, is dead, but after his funeral his widow hands Bosch a murder book that Thompson took with him when he left the LAPD 20 years before - the unsolved killing of a troubled young man in an alley used for drug deals
 526 00 *iKrimiserien med*tHarry Bosch og Renée Ballard  ; 2
-530 00 *iRenée Ballard series*tRenée Ballard-serien*bKrimiserie om den unge kriminalassistent Renée Ballard hos LAPD*d3
-530 00 *iHarry Bosch series*tHarry Bosch serien*bKrimiserie om kriminalassistent og veteran hos LAPD, Harry Bosch*c1*d22
+530 00 *iRenée Ballard-serien*xRenée Ballard series*bKrimiserie om den unge kriminalassistent Renée Ballard hos LAPD*d3
+530 00 *iHarry Bosch serien*xHarry Bosch series*bKrimiserie om kriminalassistent og veteran hos LAPD, Harry Bosch*c1*d22
 534 00 *iMichael Connellys krimi-univers*bFiktivt krimi-univers der tager afsæt i Los Angeles Police Department (LAPD). Serierne har mange krydsende figurer
 652 00 *m83
 666 00 *okrimi
@@ -112,7 +112,7 @@ z99 00 *aljl*d1
 520 00 *&1*aOriginaludgave: 1992
 520 00 *aTidligere: 2. udgave. Kbh. : Forum, 1998. 388 sider
 526 00 *&1*iKrimiserien med*tHarry Bosch ; 1
-530 00 *iHarry Bosch-serien*tHarry Bosch series*bKrimiserie om kriminalassistent og veteran hos LAPD, Harry Bosch*c1*d1*eLæses først
+530 00 *iHarry Bosch-serien*xHarry Bosch series*bKrimiserie om kriminalassistent og veteran hos LAPD, Harry Bosch*c1*d1*eLæses først
 534 00 *iMichael Connellys krimi-univers*bFiktivt krimi-univers der tager afsæt i Los Angeles Police Department (LAPD). Serierne har mange krydsende figurer
 652 00 *n83.8*z26
 652 00 *osk
