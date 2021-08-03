@@ -68,6 +68,7 @@ class DataProvider:
         self.series_dict = series_dict
         self.universe_dict = universe_dict
         self.pid2metadata = pid2metadata
+        self.series_works_dict = {}
     
     def get_pid_info(self, pid: str):
         work : Work = self.works_dict.get(pid, None) 
@@ -92,9 +93,11 @@ class DataProvider:
             return {}
         res = {
             "title": series.series_title,
-            "description": series.series_description,
-            "pids": sorted(list(series.included_works), key=lambda workid: series_num(workid=workid, works_dict=self.works_dict, series_title=series.series_title))
+            "description": series.series_description
         }
+        if not series_title in self.series_works_dict:
+            self.series_works_dict[series_title] = sorted(list(series.included_works), key=lambda workid: series_num(workid=workid, works_dict=self.works_dict, series_title=series.series_title))
+        res["pids"] = self.series_works_dict[series_title]
         if series.series_alternative_title and len(series.series_alternative_title) > 0:
             res["alternative_title"] = series.series_alternative_title
         if series.universe:
