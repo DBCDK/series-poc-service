@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash 
 
 cd iso-files
 for FILE in *lin
@@ -8,9 +8,9 @@ done
 cd ../js
 for ISOFILE in ../iso-files/*iso
 do
-    echo $ISOFILE
-    echo $(basename $ISOFILE)
-    outputfilename=$(basename $ISOFILE | sed -e "s/-latin1.iso/.json/")
+    outputfilename="../../data-files/$(basename $ISOFILE | sed -e "s/-latin1.iso/.json/")"
+    echo "Converting $ISOFILE"
+    echo "To $outputfilename"
 
-    ./convertMarcToSeriesJson.sh < $ISOFILE  > ../../data-files/$outputfilename
+    ./convertMarcToSeriesJson.sh < $ISOFILE  > $outputfilename
 done
