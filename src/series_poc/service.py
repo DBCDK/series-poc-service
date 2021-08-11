@@ -107,7 +107,7 @@ class DataProvider:
         return res
 
     def get_all_series(self):
-        return {"series": list(self.series_dict.keys())}
+        return {"series": sorted(list(self.series_dict.keys()))}
 
     def get_universe_info(self, universe_title: str):
         universe = self.universe_dict.get(universe_title, None)
@@ -122,7 +122,7 @@ class DataProvider:
         return res
     
     def get_all_universes(self):
-        return {"universes": list(self.universe_dict.keys())}
+        return {"universes": sorted(list(self.universe_dict.keys()))}
 
 class SeriesHandler(BaseHandler):
     def initialize(self, data_provider: DataProvider, stat_collector):
