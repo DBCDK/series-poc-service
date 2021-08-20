@@ -283,6 +283,37 @@ n51 00 *a20080310
 s12 00 *tTeamBo200809
 z99 00 *apbh
 
+001 00 *a 51668405 *b 870970 *c 20201212105149 *d 20150330 *f a
+004 00 *r n *a e
+008 00 *t s *u f *a 2015 *b dk *d 1 *d x *l dan *v 0
+009 00 *a a *g xx
+021 00 *e 9788793274099 *c ib.
+032 00 *a DBF201521 *x ACC201514 *x BKM201521 *x DAT201845
+038 00 *a te
+041 00 *a dan *c fre
+100 00 *a Jodorowsky *h Alexandro *6 68508282 *4 aut900 00   *a Jodorowsky *h Alejandro
+241 00 *a Castaka *r fransk
+245 00 *a Castaka *c samlet bind
+250 00 *a 1. udgave *b ÷
+260 00 *a [Kbh.] *b Faraos Cigarer *c 2015
+300 00 *a 110 sider *b alle ill. i farver *c 32 cm
+504 00 *& 1 *a Tegneserie. Da alle mænd på planeten Ahour med ét slag bliver sterile, er det op til bastarden Dayal af Castaka at videreføre slægten. Han bliver den første forfader i en lang række af krigere af Castaka-klanen
+512 00 *a På omslaget: Samlet version
+520 00 *i Samlet udgave af hans *t Metabaronernes kaste - Castaka *b . Bind 1-2. (Bind 2 ikke registreret i: Dansk bogfortegnelse)
+521 00 *& REX *b 1. oplag *c 2015 *k tr. i udl.
+530 00 *i Metabaronernes kaste - Castaka *b Serie der følger Castaka-klanen på planeten Ahour *d 1 *d 2 *e Læses først
+534 00 *i Jodoverset *b Science fiction-univers, skabt af Alexandro Jodorowsky, der breder sig over flere galakser i en ubestemt tidsalder. Især er der fokus på de to stridende galakser: Menneske-imperiet og Berg-imperiet *x The Jodoverse
+652 00 *n 82 *z 28
+652 00 *o sk
+666 00 *0 *o science fiction
+700 00 *a Martinez Pérez Daspastoras *h Julio *6 68685745 *4 art *4 clr
+900 00 *a Daspastoras *h Julio Martinez Pérez
+900 00 *a Pastoras *h Das
+900 00 *a Pérez Daspastoras *h Julio Martinez
+720 00 *o Christopher Ouzman *4 edt
+990 00 *o 201521 *b l *b v *u nt
+996 00 *a DBC
+
 001 00 *a26172063*b870970*c20210705110444*d20060315*fa
 004 00 *rn*ab
 008 00 *tm*uf*a2006*då*ldan*v0
