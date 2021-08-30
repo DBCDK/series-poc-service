@@ -7,7 +7,7 @@
 041 00 *adan*cswe
 245 00 *g[Bind] 2
 300 00 *a90 sider
-530 00 *iHårdes saga*bSerien om trældrengen Hårde, der drager ud for at blive en fri mand*d3
+530 00 *iHårdes saga*bSerien om trældrengen Hårde, der drager ud for at blive en fri mand*d3.2
 990 00 *bb*bs
 990 00 *bl
 996 00 *aDBC
@@ -26,7 +26,7 @@ z99 00 *aAdmin
 041 00 *adan*cswe
 245 00 *g[Bind] 1
 300 00 *a115 sider
-530 00 *iHårdes saga*bSerien om trældrengen Hårde, der drager ud for at blive en fri mand*d3
+530 00 *iHårdes saga*bSerien om trældrengen Hårde, der drager ud for at blive en fri mand*d3.1
 990 00 *bb*bs
 990 00 *bl
 996 00 *aDBC
@@ -46,7 +46,7 @@ z99 00 *aAdmin
 042 00 *a26*bMl 16,6 + Lo 9,5
 245 00 *g[Bind] 1
 300 00 *a118 sider
-530 00 *iHårdes saga*bSerien om trældrengen Hårde, der drager ud for at blive en fri mand*d2
+530 00 *iHårdes saga*bSerien om trældrengen Hårde, der drager ud for at blive en fri mand*d2.1
 990 00 *bb*bs
 990 00 *bl
 996 00 *aDBC
@@ -66,7 +66,7 @@ z99 00 *aAdmin
 042 00 *a31*bMl 20,6 + Lo 10,4
 245 00 *g[Bind] 2
 300 00 *a130 sider
-530 00 *iHårdes saga*bSerien om trældrengen Hårde, der drager ud for at blive en fri mand*d2
+530 00 *iHårdes saga*bSerien om trældrengen Hårde, der drager ud for at blive en fri mand*d2.2
 990 00 *bb*bs
 990 00 *bl
 996 00 *aDBC
@@ -86,7 +86,7 @@ z99 00 *aAdmin
 042 00 *a28*bMl 16,3 + Lo 11,8
 245 00 *g[Bind] 2
 300 00 *a100 sider
-530 00 *iHårdes saga*bSerien om trældrengen Hårde, der drager ud for at blive en fri mand*d1*eLæses først
+530 00 *iHårdes saga*bSerien om trældrengen Hårde, der drager ud for at blive en fri mand*d1.2
 666 00 *0*strælle
 666 00 *0*svikinger
 666 00 *0*svikingetiden
@@ -112,7 +112,7 @@ z99 00 *aAdmin
 042 00 *a28*bMl 16,3 + Lo 11,8
 245 00 *g[Bind] 1
 300 00 *a100 sider
-530 00 *iHårdes saga*bSerien om trældrengen Hårde, der drager ud for at blive en fri mand*d1*eLæses først
+530 00 *iHårdes saga*bSerien om trældrengen Hårde, der drager ud for at blive en fri mand*d1.1*eLæses først
 666 00 *0*strælle
 666 00 *0*svikinger
 666 00 *0*svikingetiden
