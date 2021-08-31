@@ -42,7 +42,7 @@ class Work:
     workid: str
     can_be_read_independently: bool
     universe: Type["Universe"]
-    series_memberships: typing.Dict[str, typing.List[int]] = field(default_factory=dict) # dict from str (series titles) -> list[int]
+    series_memberships: typing.Dict[str, typing.List[float]] = field(default_factory=dict) # dict from str (series titles) -> list[str] - latter str can be like '7.2'
 
 @dataclass
 class Series:
@@ -275,7 +275,7 @@ def read_json_file(path, filename, input_works_dict, input_series_dict, input_un
                 series = series_dict.get(obj["seriesTitle"], None) if "seriesTitle" in obj else None
                 universe = universe_dict.get(obj['universeTitle'], None) if 'universeTitle' in obj else None
                 number_in_series_str = obj.get("numberInSeries", None)
-                number_in_series = [int(s) for s in number_in_series_str] if number_in_series_str else None
+                number_in_series = [float(s) for s in number_in_series_str] if number_in_series_str else None
                 if not obj["workId"] in works_dict: # this is a work we have not seen before
                     universe = universe_dict.get(obj["universeTitle"], None) if "universeTitle" in obj else None
                     can_be_read_independently = obj.get("canBeReadIndependently", False)
