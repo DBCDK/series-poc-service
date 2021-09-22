@@ -60,36 +60,6 @@ n51 00 *a20181205
 s12 00 *tTeamBMV201848
 z99 00 *apbh
 
-001 00 *a55107610*b870970*c20210701104736*d20181026*fa
-004 00 *rn*ae
-008 00 *ts*uf*a2018*bdk*dy*ldan*x06*v0
-009 00 *aa*gxx
-021 00 *e9788771248852*chf.
-032 00 *xACC201843*aDBF201850*xBKM201850
-245 00 *aHelsinki*øVide verden
-260 00 *&1*a@Århus*b@Århus Universitetsforlag*c2018
-300 00 *a255 sider*bill. i farver
-440 00 *0*aVide verden*ø@Århus
-504 00 *&1*aEn række personlige skildringer om seværdigheder og livet i Helsinki
-521 00 *b1. oplag*c2018
-530 00 *iVide verden*bSerie hvor forskellige forfattere skriver om en storby ud fra hver deres personlige vinkel*gLæses selvstændigt
-532 00 *&1*aMed links
-652 00 *m45.97*bHelsinki
-666 00 *0*fhistorie
-666 00 *0*eFinland
-666 00 *0*eHelsinki
-666 00 *0*orejseførere
-700 01 *5870979*669040969*4ctb*g1
-945 00 *aVide verden*ø@Århus Universitetsforlag*z440(a,ø)
-990 00 *o201850*bv*unt
-991 00 *oOnlineversion optaget i denne uges BKM (5 511 797 7)
-996 00 *aDBC
-d08 00 *fwnn*aonlineversion 5 511 797 7*oeko*kahf*rpbh*aserieprojekt
-f06 00 *bv
-n51 00 *a20181205
-s12 00 *tTeamBMV201848
-z99 00 *apbh
-
 001 00 *a52843650*b870970*c20210701104735*d20161223*fa
 002 00 *a54550448
 004 00 *rn*ae
@@ -160,67 +130,6 @@ n51 00 *a20170125
 s12 00 *tTeamBLY201703
 z99 00 *apbh
 
-001 00 *a52746833*b870970*c20210701104732*d20161114*fa
-004 00 *rn*ae
-008 00 *ts*uf*a2016*bdk*dy*ldan*x06*v0
-009 00 *aa*gxx
-021 00 *e9788771249279*chf.
-032 00 *xACC201646*aDBF201701*xBKM201701
-245 00 *a@Århus*øVide verden
-260 00 *&1*a@Århus*b@Århus Universitetsforlag*c2016
-300 00 *a269 sider*bill. i farver
-440 00 *0*aVide verden*ø@Århus
-504 00 *&1*aEn række personlige skildringer om seværdigheder og livet i Århus
-521 00 *b1. oplag*c2016*kNarayana Press
-530 00 *iVide verden*bSerie hvor forskellige forfattere skriver om en storby ud fra hver deres personlige vinkel*gLæses selvstændigt
-532 00 *&1*aMed links
-652 00 *m46.4*b@Århus
-666 00 *0*fhistorie
-666 00 *0*e@Århus
-666 00 *0*eDanmark
-666 00 *0*orejseførere
-700 01 *5870979*668185785*4ctb*g1
-945 00 *aVide verden*ø@Århus Universitetsforlag*z440(a,ø)
-990 00 *o201701*bv*unt
-996 00 *aDBC
-d08 00 *ocko*okfm*kdra*rpbh*aserieprojekt
-d90 00 *o201701*bv*unt
-f06 00 *bv
-n51 00 *a20161228
-s12 00 *tTeamBLY201650
-z99 00 *apbh
-
-001 00 *a52746825*b870970*c20210701104730*d20161114*fa
-004 00 *rn*ae
-008 00 *ts*uf*a2016*bdk*dy*ldan*x06*v0
-009 00 *aa*gxx
-021 00 *e9788771248234*chf.
-032 00 *xACC201646*aDBF201701*xBKM201701*xDAT201702
-245 00 *aDublin
-260 00 *&1*a@Århus*b@Århus Universitetsforlag*c2016
-300 00 *a281 sider*bill. i farver
-440 00 *0*aVide verden*ø@Århus
-504 00 *&1*aEn række personlige skildringer om seværdigheder og livet i Dublin
-521 00 *b1. oplag*c2016*kNarayana Press, Gylling
-530 00 *iVide verden*bSerie hvor forskellige forfattere skriver om en storby ud fra hver deres personlige vinkel*gLæses selvstændigt
-532 00 *&1*aMed links
-652 00 *m43.87*bDublin
-666 00 *0*fhistorie
-666 00 *0*eIrland
-666 00 *0*eDublin
-666 00 *0*orejseførere
-700 00 *5870979*669040969*4edt
-700 01 *5870979*668985536*4ctb*g1
-945 00 *aVide verden*ø@Århus Universitetsforlag*z440(a,ø)
-990 00 *o201701*bv*unt
-996 00 *aDBC
-d08 00 *ocko*okfm*kdra*rpsc*a504*rpbh*aserieprojekt
-d90 00 *o201701*bv*unt
-f06 00 *bv
-n51 00 *a20161228
-s12 00 *tTeamBLY201616
-z99 00 *apbh
-
 001 00 *a52355974*b870970*c20210701104728*d20160427*fa
 002 00 *a54550499
 004 00 *rn*ae
@@ -257,34 +166,3 @@ f21 00 *leReolen*n9788771846911
 n51 00 *a20160518
 s12 00 *tTeamBLY201619
 z99 00 *apbh
-
-001 00 *a52320097*b870970*c20210701104726*d20160408*fa
-004 00 *rn*ae
-008 00 *ts*uf*a2016*bdk*dy*ldan*x06*v0
-009 00 *aa*gxx
-021 00 *e9788771248227*chf.
-032 00 *xACC201614*aDBF201618*xBKM201618
-245 00 *aLissabon
-260 00 *&1*a@Århus*b@Århus Universitetsforlag*c2016
-300 00 *a252 sider*bill. i farver
-440 00 *0*aVide verden*ø@Århus
-504 00 *&1*aEn række personlige skildringer om seværdigheder og livet i Lissabon
-521 00 *&REX*b1. oplag*c2016*kNarayana Press, Gylling
-530 00 *iVide verden*bSerie hvor forskellige forfattere skriver om en storby ud fra hver deres personlige vinkel*gLæses selvstændigt
-532 00 *&1*aMed links
-652 00 *m47.454*bLissabon
-666 00 *0*fhistorie
-666 00 *0*ePortugal
-666 00 *0*eLissabon
-666 00 *0*orejseførere
-700 01 *5870979*668246237*4ctb*g1
-945 00 *aVide verden*ø@Århus Universitetsforlag*z440(a,ø)
-990 00 *o201618*bv*unt
-996 00 *aDBC
-d08 00 *ownn*odra*kcrp*rhes*agensendt aht match i bibliotek.dk*rpbh*aserieprojekt
-d09 00 *zREX201626
-f06 00 *bv
-n51 00 *a20160427
-s12 00 *tTeamBLY201616
-z99 00 *apbh
-
