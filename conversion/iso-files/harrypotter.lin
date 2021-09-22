@@ -52,60 +52,6 @@ z99 00 *amasseret*d1
 d08 00 *aljl / ref
 z99 00 *amasseret*d1
 
-001 00 *a38289977*b870970*c20210702144028*d20201030*fa
-004 00 *rn*ae
-008 00 *tm*uu*a2020*bdk*dx*jf*ldan*ob*v0
-009 00 *aa*gxx
-017 00 *a22252852
-021 00 *e9788702301588*cib.
-032 00 *xACC202044*aDBF202050*xBKM202050
-041 00 *adan*ceng
-100 00 *aRowling*hJoanne K.*4aut
-241 00 *aHarry Potter and the philosopher's stone*u1997
-245 00 *aHarry Potter og de vises sten*øill. MinaLima
-250 00 *a9. udgave
-260 00 *&1*a[Kbh.]*bGyldendal*c2020
-300 00 *a356 sider*bill. i farver
-504 00 *&1*aFlot og gennemillustreret udgave af historien om Harry Potter, der har trolddomsblod i årerne og bliver elev på Hogwarts skole for magi. For både nye og gamle Harry Potter-fans fra 11 til 99 år og egnet til højtlæsning for børn fra ca. 8-9 år
-512 00 *iJoanne K. Rowling bruger også pseudonymet*eRobert Galbraith
-512 00 *&1*iFilm med titel*tHarry Potter og De Vises Sten
-512 00 *aPå ryggen: År 1
-517 00 *&1*aHøjtlæsning fra 8 år. Selvlæsning fra 11 år
-520 00 *aTidligere: 8. udgave. 2018*n54871910*r9788702272451
-521 00 *b1. oplag*c2020
-526 00 *&1*iSamhørende*tHarry Potter og De Vises Sten*tHarry Potter og Hemmelighedernes Kammer*tHarry Potter og fangen fra Azkaban*tHarry Potter og Flammernes Pokal*tHarry Potter og Fønixordenen*tHarry Potter og halvblodsprinsen*tHarry Potter og dødsregalierne*tHarry Potter og det forbandede barn
-530 00 *iHarry Potter*xThe Harry Potter series*bFantasyserie af J. K. Rowling om den unge troldmand Harry Potter og hans venner*c1*d1*eLæses først
-534 00 *iWizarding World*bMagisk univers skabt af J.K. Rowling*xThe Wizarding World of Harry Potter
-652 00 *n83*z296
-652 00 *osk
-666 00 *0*hHarry Potter
-666 00 *0*hRon Weasley
-666 00 *0*hHermione Granger
-666 00 *0*stroldmænd
-666 00 *0*smagi
-666 00 *0*ofantasy
-666 00 *0*oromaner
-666 00 *0*ufor 8 år
-666 00 *0*ufor 9 år
-666 00 *0*ufor 10 år
-666 00 *0*ufor 11 år
-666 00 *0*ufor 12 år
-666 00 *0*ufor 13 år
-666 00 *0*ufor 14 år
-666 00 *0*ufor 15 år
-666 00 *0*ufor 16 år
-666 00 *0*ufor højtlæsning
-720 00 *oMinaLima*4ill
-720 00 *oHanna Lützen*4trl
-990 00 *bl*bb*bs*unu
-996 00 *aDBC
-d08 00 *fsah*oeko*kcra*a017/520 da denne er del af udgaverækken, selvom det er en version og ikke udgave
-d08 00 *amasserettelse, 520-årstal flyttet til 241u, april 2021
-d08 00 *amasserettelse ifm. Fiktive figurer, juni 2021
-d08 00 *aljl / ref
-s12 00 *tTeamBMV202048
-z99 00 *amasseret*d1
-
 001 00 *a48919901*b870970*c20210624114347*d20200929*fa
 004 00 *rn*ae
 008 00 *tm*uu*a2020*bdk*dx*jf*ldan*ob*v0
@@ -203,53 +149,6 @@ z99 00 *amasseret*d1
 900 00 *aRowling*hJ. K.*z600
 996 00 *a765700*o746100*m746100
 d08 00 *aljl / ref
-z99 00 *amasseret*d1
-
-001 00 *a47092183*b870970*c20210702144007*d20190910*fa
-004 00 *rn*ae
-008 00 *tm*uf*a2019*bdk*dx*jf*ldan*ob*v0
-009 00 *aa*gxx
-021 00 *e9788702284799*cib.
-032 00 *xACC201937*aDBF201945*xBKM201945
-041 00 *adan*ceng
-100 00 *aRowling*hJoanne K.*4aut
-241 00 *aHarry Potter and the goblet of fire*u2000
-245 00 *aHarry Potter og Flammernes Pokal*øIll. Jim Kay
-250 00 *a[Illustreret udgave] (8. udgave)
-260 00 *&1*a[Kbh.]*bGyldendal*c2019
-300 00 *a450 sider*bill. i farver*c28 cm
-504 00 *&1*aFantasy. På mystisk vis er Harry Potter blevet udvalgt til at deltage i en magisk trekamp mellem de forskellige troldmandsskoler. Samtidig er hans dødsfjende troldmanden Voldemort ved at genvinde sin magt
-512 00 *&1*iFilm med titel*tHarry Potter og Flammernes Pokal
-512 00 *iJoanne K. Rowling bruger også pseudonymet*eRobert Galbraith
-526 00 *&1*i4. del af*tHarry Potter og De Vises Sten*b. Seriens indhold se denne
-530 00 *iHarry Potter*xThe Harry Potter series*bFantasyserie af J. K. Rowling om den unge troldmand Harry Potter og hans venner*c1*d4
-534 00 *iWizarding World*bMagisk univers skabt af J.K. Rowling*xThe Wizarding World of Harry Potter
-652 00 *n83*z296
-652 00 *osk
-666 00 *0*hHarry Potter
-666 00 *0*hRon Weasley
-666 00 *0*hHermione Granger
-666 00 *0*stroldmænd
-666 00 *0*smagi
-666 00 *0*ofantasy
-666 00 *0*ufor 11 år
-666 00 *0*ufor 12 år
-666 00 *0*ufor 13 år
-666 00 *0*ufor 14 år
-666 00 *0*ufor 15 år
-666 00 *0*ufor 16 år
-720 00 *oHanna Lützen*4trl
-720 00 *oJim Kay*4ill
-990 00 *bl*bb*bs*unt
-996 00 *aDBC
-d08 00 *amatch med 54871953. Afventer trykt bog til LU / bjo*fdra*aForventet udgivelsesdato 11-10-2019*olhf*aFFK slettet, overhalet af tr. bog, forventet udgivelsesdato ifølge forlaget d. 11-10-2019, LU frist 21.10*kcrp
-d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
-d08 00 *amasserettelse, 520-årstal flyttet til 241u, april 2021
-d08 00 *amasserettelse ifm. Fiktive figurer, juni 2021
-d08 00 *aljl / ref
-d70 00 *bGyldendal
-f21 00 *ahttp://dmat.dbc.dk/pmat/fetchFile.php/fullcontent/9788702284799*lDBCPmat*fhttp://dmat.dbc.dk/pmat/fetchFile.php/frontcover/9788702284799.jpg*ahttp://dmat.dbc.dk/pmat/fetchFile.php/sample/9788702284799
-s12 00 *tTeamBAC201943
 z99 00 *amasseret*d1
 
 001 00 *a47086868*b870970*c20210702143954*d20190910*fa
@@ -694,56 +593,6 @@ z99 00 *amasseret*d1
 990 00 *o201841*bb*bs*unu
 996 00 *aDBC
 d08 00 *fjdy*olhf*atilf. 512 (pseudonym)
-d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
-d08 00 *amasserettelse, 520-årstal flyttet til 241u, april 2021
-d08 00 *amasserettelse ifm. Fiktive figurer, juni 2021
-d08 00 *aljl / ref
-f06 00 *bb*bs
-n51 00 *a20181003
-s12 00 *tTeamBAC201839
-z99 00 *amasseret*d1
-
-001 00 *a54871945*b870970*c20210702143833*d20180919*fa
-004 00 *rn*ae
-008 00 *tm*uu*a2018*bdk*dx*jf*ldan*ob*v0
-009 00 *aa*gxx
-017 00 *a22639862
-021 00 *e9788702272468*chf.
-032 00 *xACC201838*aDBF201841*xBKM201841
-041 00 *adan*ceng
-100 00 *aRowling*hJoanne K.*4aut
-241 00 *aHarry Potter and the prisoner of Azkaban*u1999
-245 00 *aHarry Potter og fangen fra Azkaban
-250 00 *a8. udgave
-260 00 *&1*a[Kbh.]*bGyldendal*c2018
-300 00 *a482 sider
-504 00 *&1*aFantasy. Harry Potter er elev på trolddomsskolen på tredje år. Han får at vide, at hans forældres morder er flygtet fra Azkabanfængslet og nu også vil dræbe ham
-512 00 *&1*iFilm med titel*tHarry Potter og fangen fra Azkaban
-512 00 *aPå ryggen: 3
-512 00 *iJoanne K. Rowling bruger også pseudonymet*eRobert Galbraith
-520 00 *iTidligere: 7. udgave med titel*tHarry Potter og fangen fra Azkaban (Ill. Jim Kay)*b. 2017*b. - 1. i.e. 6. udgave. 2015*n51980220*r9788702173246
-521 00 *b1. oplag*c2018
-526 00 *&1*i3. del af*tHarry Potter og De Vises Sten*b. Seriens indhold se denne
-530 00 *iHarry Potter*xThe Harry Potter series*bFantasyserie af J. K. Rowling om den unge troldmand Harry Potter og hans venner*c1*d3
-534 00 *iWizarding World*bMagisk univers skabt af J.K. Rowling*xThe Wizarding World of Harry Potter
-652 00 *n83*z296
-652 00 *osk
-666 00 *0*hHarry Potter
-666 00 *0*hRon Weasley
-666 00 *0*hHermione Granger
-666 00 *0*stroldmænd
-666 00 *0*smagi
-666 00 *0*ofantasy
-666 00 *0*ufor 11 år
-666 00 *0*ufor 12 år
-666 00 *0*ufor 13 år
-666 00 *0*ufor 14 år
-666 00 *0*ufor 15 år
-666 00 *0*ufor 16 år
-720 00 *oHanna Lützen*4trl
-990 00 *o201841*bb*bs*unu
-996 00 *aDBC
-d08 00 *fjdy*olhf*kpbh*a520: 7.udg. nævnt fordi den af forlaget indregnes i udgaverækken selvom det er en version og ikke udgave*atilf. 512 (pseudonym)
 d08 00 *amasserettelse af genrer fra 666s til 666o, dec 2020
 d08 00 *amasserettelse, 520-årstal flyttet til 241u, april 2021
 d08 00 *amasserettelse ifm. Fiktive figurer, juni 2021
